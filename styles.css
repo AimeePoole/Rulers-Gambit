@@ -1,1 +1,19 @@
 /*active*/ 
+.boxBlue
+{
+    background-color: #444484;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 10px;
+    color:#ffffff;
+}
+
+.boxCream
+{
+    background-color:#ead8c1;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 10px;
+    color: #000000;
+
+}
