@@ -1,62 +1,53 @@
-/*inactive*/ 
-.box
-{
+/*active*/
+.box {
     margin: 10px;
     border-radius: 15px;
-    padding: 10px 20px;
+    padding: 10px 30px;
 }
 
-.borderBox
-{
+.borderBox {
     margin: 10px;
     border-radius: 15px;
-    padding:20px;
+    padding: 20px;
 }
 
-.boxWidth
-{
+.boxWidth {
     width: 50%;
 }
 
-.backgroundDarkBlue
-{
+.backgroundDarkBlue {
     background-color: #444484;
-    color:#ffffff;
+    color: #ffffff;
 }
 
-.backgroundLightBlue
-{
+.backgroundLightBlue {
     background-color: #5E6FB4;
-    color:#ffffff;
+    color: #ffffff;
 }
 
-.backgroundDarkCream
-{
-    background-color:#ead8c1;
+.backgroundDarkCream {
+    background-color: #ead8c1;
     color: #000000;
 }
 
-.backgroundLightCream
-{
-    background-color:#FAEDCF;
+.backgroundLightCream {
+    background-color: #FAEDCF;
     color: #000000;
 }
 
-.border
-{
+.border {
     width: 100%;
     height: auto;
 }
 
-.map
-{
+.map {
     width: 100%;
     height: auto;
-} 
+}
 
 .flip-vertically {
     transform: scaleY(-1);
-  }
+}
 
 
 .flexbox {
@@ -65,4 +56,8 @@
     box-sizing: border-box;
     justify-content: space-around;
 
+}
+
+.centre-text {
+    text-align: center;
 }
