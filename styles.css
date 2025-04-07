@@ -36,8 +36,12 @@
     color: #000000;
 }
 
-#border
+.border
 {
     width: 100%;
     height: auto;
 }
+
+.flip-vertically {
+    transform: scaleY(-1);
+  }
