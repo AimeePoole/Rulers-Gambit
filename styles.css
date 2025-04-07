@@ -1,19 +1,43 @@
 /*inactive*/ 
-.boxBlue
+.box
 {
-    background-color: #444484;
     margin: 10px;
     border-radius: 15px;
-    padding: 10px;
+    padding: 10px 20px;
+}
+
+.borderBox
+{
+    margin: 10px;
+    border-radius: 15px;
+    padding:20px;
+}
+.backgroundDarkBlue
+{
+    background-color: #444484;
     color:#ffffff;
 }
 
-.boxCream
+.backgroundLightBlue
+{
+    background-color: #5E6FB4;
+    color:#ffffff;
+}
+
+.backgroundDarkCream
 {
     background-color:#ead8c1;
-    margin: 10px;
-    border-radius: 15px;
-    padding: 10px;
     color: #000000;
+}
 
+.backgroundLightCream
+{
+    background-color:#FAEDCF;
+    color: #000000;
+}
+
+#border
+{
+    width: 100%;
+    height: auto;
 }
