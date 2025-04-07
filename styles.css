@@ -12,6 +12,12 @@
     border-radius: 15px;
     padding:20px;
 }
+
+.boxWidth
+{
+    width: 50%;
+}
+
 .backgroundDarkBlue
 {
     background-color: #444484;
@@ -42,6 +48,21 @@
     height: auto;
 }
 
+.map
+{
+    width: 100%;
+    height: auto;
+} 
+
 .flip-vertically {
     transform: scaleY(-1);
   }
+
+
+.flexbox {
+    display: flex;
+    margin: 0;
+    box-sizing: border-box;
+    justify-content: space-around;
+
+}
