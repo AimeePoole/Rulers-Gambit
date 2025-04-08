@@ -91,13 +91,18 @@ multiple lines that are fully spaced out*/
 }
 
 /*used for the buttons on home screen*/
-.flexbox {
+.flexboxType1 {
     margin: auto;
     display: flex;
     justify-content: space-evenly;
 }
 
-
+.flexboxType2 {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
 
 .button{
 
@@ -128,9 +133,13 @@ multiple lines that are fully spaced out*/
     width: 140px;
 }
 
-footer {
-    position:fixed; 
-    padding:5px; 
-    bottom:10px;
-    
+.OxAndTree{
+    width: 35%;
+    height: auto;
+}
+
+#homepage a
+{ 
+    color: white; 
+    text-decoration: none;
 }
