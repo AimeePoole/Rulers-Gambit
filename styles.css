@@ -42,6 +42,12 @@ body {
     color: #000000;
 }
 
+/*used for buttons*/
+.backgroundPurple{
+    background-color: #590749;
+    color: rgb(255, 255, 255);
+}
+
 .border {
     width: 100%;
     height: auto;
@@ -56,14 +62,6 @@ body {
     transform: scaleY(-1);
 }
 
-
-.flexbox {
-    display: flex;
-    margin: 0;
-    box-sizing: border-box;
-    justify-content: space-around;
-
-}
 
 .centre-text {
     text-align: center;
@@ -90,4 +88,46 @@ multiple lines that are fully spaced out*/
     width: 80%; 
     height: auto;
 
+}
+
+/*used for the buttons on home screen*/
+.flexbox {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/*this changes the buttons' styling and makes the cursor turn to a pointer when hovered over*/
+.button{
+
+    font-size: 18px;
+    cursor: pointer;
+    border-color: #000000;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+}
+
+.buttonSmall{
+    background-color: #590749;
+    color: rgb(255, 255, 238);
+    font-size: 16px;
+    cursor: pointer;
+    border-color: #000000;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: 140px;
+}
+
+footer {
+    position:fixed; 
+    padding:5px; 
+    bottom:10px;
+    
 }
