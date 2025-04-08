@@ -85,7 +85,7 @@ multiple lines that are fully spaced out*/
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%; 
+    width: 90%; 
     height: auto;
 
 }
@@ -94,31 +94,34 @@ multiple lines that are fully spaced out*/
 .flexbox {
     margin: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 
 
-/*this changes the buttons' styling and makes the cursor turn to a pointer when hovered over*/
 .button{
 
     font-size: 18px;
     cursor: pointer;
-    border-color: #000000;
-    border-width: 2px;
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
     width: 200px;
 }
 
+.buttonLarge{
+
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 250px;
+}
+
 .buttonSmall{
-    background-color: #590749;
-    color: rgb(255, 255, 238);
     font-size: 16px;
     cursor: pointer;
-    border-color: #000000;
-    border-width: 2px;
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
