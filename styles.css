@@ -1,4 +1,11 @@
-/*inactive*/
+/*active*/
+
+body {
+    background-color: #ead8c1;
+    color: #000000;
+} 
+
+
 .box {
     margin: 10px;
     border-radius: 15px;
