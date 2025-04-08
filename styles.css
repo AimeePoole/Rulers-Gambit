@@ -68,3 +68,16 @@ body {
 .centre-text {
     text-align: center;
 }
+
+.navigation {
+    margin: 1px;
+    padding: 10px;
+}
+
+/*This defines a flex container for the navigation. It wraps onto 
+multiple lines that are fully spaced out*/
+.nav {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
