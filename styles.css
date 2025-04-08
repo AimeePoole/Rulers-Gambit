@@ -81,3 +81,13 @@ multiple lines that are fully spaced out*/
     display: flex;
     justify-content: center;
 }
+
+.title-image
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; 
+    height: auto;
+
+}
