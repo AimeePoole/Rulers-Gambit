@@ -1,13 +1,12 @@
-/*inactive*/
+/*active*/
 
 body {
     background-color: #ead8c1;
     color: #000000;
-} 
+}
 
-.width100
-{
- width: 100%;
+.width100 {
+    width: 100%;
 }
 
 .box {
@@ -45,7 +44,7 @@ text colour to black or white depending on the background colour*/
 }
 
 /*used for buttons*/
-.backgroundPurple{
+.backgroundPurple {
     background-color: #590749;
     color: rgb(255, 255, 255);
 }
@@ -82,12 +81,11 @@ multiple lines that are fully spaced out*/
     justify-content: center;
 }
 
-.title-image
-{
+.title-image {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 90%; 
+    width: 90%;
     height: auto;
 
 }
@@ -106,7 +104,7 @@ multiple lines that are fully spaced out*/
     align-items: end;
 }
 
-.button{
+.button {
 
     font-size: 18px;
     cursor: pointer;
@@ -116,7 +114,7 @@ multiple lines that are fully spaced out*/
     width: 200px;
 }
 
-.buttonLarge{
+.buttonLarge {
 
     font-size: 24px;
     cursor: pointer;
@@ -126,7 +124,7 @@ multiple lines that are fully spaced out*/
     width: 250px;
 }
 
-.buttonSmall{
+.buttonSmall {
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
@@ -135,13 +133,12 @@ multiple lines that are fully spaced out*/
     width: 140px;
 }
 
-.OxAndTree{
+.OxAndTree {
     width: 35%;
     height: auto;
 }
 
-.white a
-{ 
-    color: white; 
+.white a {
+    color: white;
     text-decoration: none;
 }
