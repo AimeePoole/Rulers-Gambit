@@ -142,3 +142,14 @@ multiple lines that are fully spaced out*/
     color: white;
     text-decoration: none;
 }
+
+.lore-container {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 1000px) {
+    .lore-container {
+      flex-direction: column;
+    }
+}
