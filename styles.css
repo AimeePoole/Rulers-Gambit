@@ -233,8 +233,39 @@ im touching stuff
 }
 
 
+/* ============================
+   Section: stats_page
+   ============================ */
+.stats-container {
+    display: flex;
+    flex-direction: row;
+}
 
+.stats-item {
+}
 
+.country-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.countries-item {
+}
+
+.stats-map
+{
+}
+
+#stats
+{
+    width: 30%;
+
+}
+#map-and-countries
+{
+    width: 70%;
+
+}
 /* ============================
 Section: popups test using code from geeksforgeeks   
 ============================ */
