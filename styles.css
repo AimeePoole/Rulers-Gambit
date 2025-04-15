@@ -304,15 +304,35 @@ Section: popups test using code from geeksforgeeks
    #title{
     display: flex;
     justify-content: flex-start;
+    width: 35%;
    }
 
    #border-under-title {
     width: 40%;
    }
 
+   #main-page-border{
+    width: 60%;
+   }
+
    #stats_title{
     display: flex;
-    justify-content: flex-start;
+    align-content: flex-start;
+    width: 25%;
+   }
+
+   .left-side{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    background-color: #ebf448;
+   }
+
+   .right-side{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    background-color: #ed153d;
    }
 
    #stats-box{
@@ -323,14 +343,13 @@ Section: popups test using code from geeksforgeeks
     color: white;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
    }
 
    #main-page-map{
-    width: 40%;
     height: auto;
+    display: flex;
+    flex-direction: column;
    }
 
    #senario-box{
@@ -340,7 +359,18 @@ Section: popups test using code from geeksforgeeks
     background-color: #444484;
     color: white;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
    }
+
+   #inner-senario-box{
+    margin: 10px;
+    border-radius: 15px;
+    padding: 10px 30px;
+    background-color: #448453;
+    color: white;
+    display: flex;
+    flex-direction: column;
+   }
+
+
 
