@@ -1,11 +1,24 @@
 /*active*/
 
+/* ============================
+   Section: Body and useful 
+   ============================ */
 body {
     background-color: #ead8c1;
     color: #000000;
     font-family: "Lucida Console", "Courier New", monospace;
 }
 
+.centre-text {
+    text-align: center;
+}
+
+
+
+
+/* ============================
+   Section: Object widths
+   ============================ */
 .width100 {
     width: 100%;
 }
@@ -14,6 +27,12 @@ body {
     width: 50%;
 }
 
+
+
+
+/* ============================
+   Section: Boxes
+   ============================ */
 .box {
     margin: 10px;
     border-radius: 15px;
@@ -26,8 +45,14 @@ body {
     padding: 20px;
 }
 
-/*These all change the background colour of elements they also change the 
-text colour to black or white depending on the background colour*/
+
+
+
+/* =========================================
+   Section: Navigation Background colours
+   Description: These all change the background colour of elements they also change the 
+   text colour to black or white depending on the background colour.
+   ========================================= */
 .backgroundDarkBlue {
     background-color: #444484;
     color: #ffffff;
@@ -54,60 +79,12 @@ text colour to black or white depending on the background colour*/
     color: rgb(255, 255, 255);
 }
 
-.border {
-    width: 100%;
-    height: auto;
-}
-
-.map {
-    width: 100%;
-    height: auto;
-}
-
-.flip-vertically {
-    transform: scaleY(-1);
-}
 
 
-.centre-text {
-    text-align: center;
-}
 
-.navigation {
-    margin: 1px;
-    padding: 10px;
-}
-
-/*This defines a flex container for the navigation. It wraps onto 
-multiple lines that are fully spaced out*/
-.nav {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-}
-
-.title-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    height: auto;
-
-}
-
-/*used for the buttons on home screen*/
-.flexboxType1 {
-    margin: auto;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.flexboxType2 {
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-}
+/* ============================
+   Section: Buttons
+   ============================ */
 
 .button {
 
@@ -138,14 +115,68 @@ multiple lines that are fully spaced out*/
     width: 140px;
 }
 
-.OxAndTree {
-    width: 35%;
-    height: auto;
-}
-
 .white a {
     color: white;
     text-decoration: none;
+}
+
+
+
+
+/* ============================
+   Section: Borders
+   ============================ */
+.flip-vertically {
+    transform: scaleY(-1);
+}
+
+.border {
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* ============================
+Section: Home_Page   
+============================ */
+
+.OxAndTree {
+    width: 40%;
+    height: auto;
+}
+
+.title-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: auto;
+}
+
+/*used for the buttons on home screen*/
+#flexbox-home-buttons {
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#flexbox-home-image-buttons {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+
+
+
+/* ============================
+Section: Lore_Page   
+============================ */
+.map {
+    width: 100%;
+    height: auto;
 }
 
 .lore-container {
@@ -155,7 +186,6 @@ multiple lines that are fully spaced out*/
 
 @media (max-width: 1000px) {
     .lore-container {
-      flex-direction: column;
+        flex-direction: column;
     }
 }
-
