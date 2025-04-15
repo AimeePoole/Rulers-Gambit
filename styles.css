@@ -213,3 +213,9 @@ NOTE CHANGE NAMES AND CLASSES TO IDS
 Section: Rules page    
 im touching stuff 
 ============================ */
+#Rules-example{
+    margin: 10px;
+    border-radius: 15px;
+    padding: 10px 30px;
+    background-color: #444484;
+}
