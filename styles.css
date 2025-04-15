@@ -3,6 +3,7 @@
 body {
     background-color: #ead8c1;
     color: #000000;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .width100 {
@@ -158,6 +159,3 @@ multiple lines that are fully spaced out*/
     }
 }
 
-#testing {
-    font-family: "Lucida Console", "Courier New", monospace;
-}
