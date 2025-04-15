@@ -173,6 +173,7 @@ Section: Home_Page
 
 /* ============================
 Section: Lore_Page   
+NOTE CHANGE NAMES AND CLASSES TO IDS
 ============================ */
 .map {
     width: 100%;
@@ -188,4 +189,12 @@ Section: Lore_Page
     .lore-container {
         flex-direction: column;
     }
+}
+
+
+/* ============================
+   Section: animation_page
+   ============================ */
+.animation {
+    max-height: 80vh;
 }
