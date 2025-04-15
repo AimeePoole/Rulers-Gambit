@@ -236,41 +236,60 @@ im touching stuff
 /* ============================
    Section: stats_page
    ============================ */
-.stats-container {
-    display: flex;
-    flex-direction: row;
-}
 
-.stats-item {
-    width: 50%;
-}
-
-.country-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.countries-item {
-}
-
-.stats-map
-{
-}
-
-#stats
-{
-
-}
-#map-and-countries
-{
-
-}
-
-.stats-image
-{
-    width: 50%;
-    margin: 20px;
-}
+   .stats-borders
+   {
+       width: 80%;
+       margin: 3% auto;
+       height: 95vh;
+       border-radius: 40px;
+       margin-top: 0px;
+       margin-bottom: 0px;
+       padding: 0px;
+   }
+   
+   #countries
+   {
+       overflow: scroll;
+   }
+   .stats-container {
+       display: flex;
+       flex-direction: row;
+       height: 95vh;
+   }
+   
+   .stats-item {
+       width: 50%;
+   }
+   
+   .country-container {
+       display: flex;
+       flex-direction: column;
+       height: 95vh;
+   }
+   
+   .countries-item {
+   
+   }
+   
+   .stats-map
+   {
+   }
+   
+   #stats
+   {
+   
+   }
+   #map-and-countries
+   {
+   }
+   
+   .stats-image
+   {
+       width: 50%;
+       margin: 20px;
+   }
+   
 /* ============================
 Section: popups test using code from geeksforgeeks   
 ============================ */
