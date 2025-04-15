@@ -183,9 +183,8 @@ Section: Home_Page
 
 /* ============================
 Section: Lore_Page   
-NOTE CHANGE NAMES AND CLASSES TO IDS
 ============================ */
-.map {
+#lore-map {
     width: 100%;
     height: auto;
 }
