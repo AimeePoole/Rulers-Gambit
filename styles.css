@@ -142,9 +142,16 @@ Section: Home_Page
 ============================ */
 
 .OxAndTree {
-    width: 40%;
+    width: 420px;
     height: auto;
 }
+
+@media (max-width: 1000px) {
+    .OxAndTree {
+      width:30%;
+    }
+}
+
 
 .title-image {
     display: block;
