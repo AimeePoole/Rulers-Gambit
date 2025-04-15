@@ -296,3 +296,52 @@ Section: popups test using code from geeksforgeeks
 .popup-gfg:target {
     display: flex;
 }
+
+
+/* ============================
+   Section: senario-page
+   MAIN PAGE AHH
+   ============================ */
+   #title{
+    display: flex;
+    justify-content: flex-start;
+   }
+
+   #border-under-title {
+    width: 40%;
+   }
+
+   #stats_title{
+    display: flex;
+    justify-content: flex-start;
+   }
+
+   #stats-box{
+    margin: 10px;
+    border-radius: 15px;
+    padding: 10px 30px;
+    background-color: #444484;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+   }
+
+   #main-page-map{
+    width: 100%;
+    height: auto;
+   }
+
+   #senario-box{
+    margin: 10px;
+    border-radius: 15px;
+    padding: 10px 30px;
+    background-color: #444484;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+   }
+
