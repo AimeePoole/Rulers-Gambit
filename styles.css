@@ -242,6 +242,7 @@ im touching stuff
 }
 
 .stats-item {
+    width: 50%;
 }
 
 .country-container {
@@ -258,12 +259,10 @@ im touching stuff
 
 #stats
 {
-    width: 30%;
 
 }
 #map-and-countries
 {
-    width: 70%;
 
 }
 
