@@ -218,4 +218,17 @@ im touching stuff
     border-radius: 15px;
     padding: 10px 30px;
     background-color: #444484;
+    color: white;
+}
+
+.Rules-Example-option{
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bold;
+}
+
+.Rules-Senario-Options {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
