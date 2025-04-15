@@ -9,6 +9,10 @@ body {
     width: 100%;
 }
 
+.width50 {
+    width: 50%;
+}
+
 .box {
     margin: 10px;
     border-radius: 15px;
