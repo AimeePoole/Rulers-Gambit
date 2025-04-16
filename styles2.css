@@ -13,3 +13,6 @@
     border-radius: 5px;
     text-align: center;
 }
+.popup:target {
+    display: flex;
+}

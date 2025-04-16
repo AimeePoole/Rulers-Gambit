@@ -1,5 +1,5 @@
-const openPopup = document.getElementById('openPopup');
-const closePopup = document.getElementById('closePopup');
+const openPopup = document.getElementById('openPopupButton');
+const closePopup = document.getElementById('closePopupButton');
 const popup = document.getElementById('popup');
 
 openPopup.addEventListener('click', () => {

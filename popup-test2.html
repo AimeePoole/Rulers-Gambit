@@ -8,20 +8,26 @@ This contains the meta information, the title and the link to the css style shee
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pop up</title>
-    <link href="styles2.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <button id="openPopup" style="padding: 10px 20px; background-color: #28a745; 
-                                  color: #fff; border: none; border-radius: 5px;">Open Popup</button>
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <h2>Popup Title</h2>
-            <p>This popup is controlled with JavaScript.</p>
-            <button id="closePopup" style="margin-top: 10px; padding:
-                                           5px 10px; background-color: #dc3545; color: #fff; 
-                                           border: none; border-radius: 3px;">Close</button>
-        </div>
-    </div>
+    <button id="openPopupButton" class = "buttonSmall backgroundDarkBlue centre-text white">Enter</button>
+    <section id="popup" class="popup">
+        <section class="borderBox backgroundDarkBlue">
+            <section class="box backgroundLightBlue">
+                <h2>The results</h2>
+                <p>a. -1 security, +1 military</p>
+                <p>b. -1 security, +2 military</p>
+                <p>c. -1 military, +2 security</p>
+                <p>d. -1 security, +1 military, +1 ppp</p>
+
+                <button id="closePopupButton" class ="buttonSmall backgroundDarkBlue centre-text white">Close</button>
+            </section>
+        </section>
+    </section>
     <script src="pop-up-script.js"></script>
 </body>
 </html>
+
+
+

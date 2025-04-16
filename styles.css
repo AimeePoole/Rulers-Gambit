@@ -407,7 +407,9 @@ Section: popups test using code from geeksforgeeks
 
   /*https://www.geeksforgeeks.org/how-to-create-popup-box-using-html-and-css/*/
   
-  .popup {
+
+
+.popup {
     display: none;
     position: fixed;
     top: 0; left: 0;
@@ -421,7 +423,4 @@ Section: popups test using code from geeksforgeeks
     padding: 20px;
     border-radius: 5px;
     text-align: center;
-}
-.popup:target {
-    display: flex;
 }
