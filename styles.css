@@ -304,6 +304,19 @@ Section: popups test using code from geeksforgeeks
    Section: senario-page
    MAIN PAGE AHH
    ============================ */
+
+   #Senario-body{
+       width: 80%;
+       margin: 3% auto;
+       height: 95vh;
+       border-radius: 40px;
+       margin-top: 0px;
+       margin-bottom: 0px;
+       padding: 0px;
+       display: flex;
+       flex-direction: row;
+   }
+
    #title{
     display: flex;
     justify-content: flex-start;
@@ -327,14 +340,14 @@ Section: popups test using code from geeksforgeeks
    .left-side{
     width: 40%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: #ebf448;
    }
 
    .right-side{
     width: 60%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: #ed153d;
    }
 
@@ -345,14 +358,13 @@ Section: popups test using code from geeksforgeeks
     background-color: #444484;
     color: white;
     display: flex;
-    align-items: center;
-    flex-direction: column;
    }
 
    #main-page-map{
     height: auto;
     display: flex;
     flex-direction: column;
+    width: 40%;
    }
 
    #senario-box{
@@ -362,7 +374,7 @@ Section: popups test using code from geeksforgeeks
     background-color: #444484;
     color: white;
     display: flex;
-    flex-direction: column;
+
    }
 
    #inner-senario-box{
@@ -372,7 +384,6 @@ Section: popups test using code from geeksforgeeks
     background-color: #448453;
     color: white;
     display: flex;
-    flex-direction: column;
    }
 
 
