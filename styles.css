@@ -306,9 +306,10 @@ Section: popups test using code from geeksforgeeks
    ============================ */
 
    #Senario-body{
-       width: 80%;
+       width: 100%;
+       background-color: purple;
        margin: 3% auto;
-       height: 95vh;
+       height: 80vh;
        border-radius: 40px;
        display: flex;
        flex-direction: row;
@@ -345,6 +346,7 @@ Section: popups test using code from geeksforgeeks
 
    .right-side{
     width: 60%;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     background-color: #ed153d;
