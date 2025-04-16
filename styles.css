@@ -319,12 +319,8 @@ Section: popups test using code from geeksforgeeks
    #title{
     display: flex;
     justify-content: flex-start;
-    width: 35%;
    }
 
-   #border-under-title {
-    width: 40%;
-   }
 
    #main-page-border{
     width: 60%;
