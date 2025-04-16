@@ -336,13 +336,11 @@ Section: popups test using code from geeksforgeeks
     width: 40%;
     display: flex;
     flex-direction: column;
-    height: 60vh;
     background-color: #ebf448;
    }
 
    .right-side{
     width: 60%;
-    height: 80vh;
     display: flex;
     flex-direction: column;
     background-color: #ed153d;
@@ -352,6 +350,7 @@ Section: popups test using code from geeksforgeeks
     margin: 10px;
     border-radius: 15px;
     padding: 10px 30px;
+    height: 75vh;
     background-color: #444484;
     color: white;
     display: flex;
@@ -368,9 +367,12 @@ Section: popups test using code from geeksforgeeks
     margin: 10px;
     border-radius: 15px;
     padding: 10px 30px;
+    height: 95vh;
     background-color: #444484;
     color: white;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
    }
 
