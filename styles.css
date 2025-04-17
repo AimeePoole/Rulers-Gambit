@@ -270,11 +270,16 @@ im touching stuff
    
    .stats-image
    {
-       width: 50%;
+       width: 40%;
        margin: 20px;
    }
    
-
+   .stats-form
+   {
+       display: flex;
+       flex-direction: row;
+       justify-content:space-between;
+   }
 
 
 /* ============================
@@ -366,47 +371,8 @@ im touching stuff
     justify-content: center;
    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
    /* ============================
-Section: popups test using code from geeksforgeeks   
+Section: popups test   
 ============================ */
 
   /*https://www.geeksforgeeks.org/how-to-create-popup-box-using-html-and-css/*/
@@ -428,3 +394,4 @@ Section: popups test using code from geeksforgeeks
     border-radius: 5px;
     text-align: center;
 }
+
