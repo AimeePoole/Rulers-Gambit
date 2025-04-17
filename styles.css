@@ -293,7 +293,10 @@ im touching stuff
        justify-content: space-between;
    }
 
-   #title{
+   #title,
+   #border-under-title {
+    height: 100px;
+    width: 100px;
     display: flex;
     justify-content: flex-start;
    }
