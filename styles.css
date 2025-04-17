@@ -1,4 +1,4 @@
-/*active*/
+/*inactive*/
 
 /* ============================
    Section: Body and useful 
@@ -252,6 +252,7 @@ im touching stuff
    {
        overflow: scroll;
    }
+   
    .stats-container {
        display: flex;
        flex-direction: row;
