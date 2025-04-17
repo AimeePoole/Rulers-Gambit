@@ -1,4 +1,4 @@
-/*inactive*/
+/*active*/
 
 /* ============================
    Section: Body and useful 
@@ -285,7 +285,7 @@ im touching stuff
    #Senario-body{
        width: 100%;
        background-color: purple;
-       margin: 3% auto;
+       margin: 0.5% auto;
        height: 80vh;
        border-radius: 40px;
        display: flex;
@@ -293,7 +293,10 @@ im touching stuff
        justify-content: space-between;
    }
 
-   #title{
+   #title,
+   #border-under-title {
+    height: 100px;
+    width: 100px;
     display: flex;
     justify-content: flex-start;
    }
@@ -305,7 +308,6 @@ im touching stuff
 
    #stats_title{
     display: flex;
-    align-content: flex-start;
     width: 25%;
    }
 
@@ -331,6 +333,7 @@ im touching stuff
     background-color: #444484;
     color: white;
     display: flex;
+    justify-content: center;
    }
 
    #main-page-map{
@@ -349,7 +352,7 @@ im touching stuff
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    align-items: center;
 
    }
 
@@ -360,6 +363,7 @@ im touching stuff
     background-color: #448453;
     color: white;
     display: flex;
+    justify-content: center;
    }
 
 
