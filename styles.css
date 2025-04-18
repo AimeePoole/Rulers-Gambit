@@ -205,8 +205,23 @@ Section: Lore_Page
    Section: animation_page
    ============================ */
 .animation {
-    max-height: 80vh;
+    max-height: 70vh;
 }
+
+.animation-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: end;
+}
+
+.animation-item
+{
+    max-height: 90vh;
+    aspect-ratio: 3/2;
+}
+
 
 /* ============================
 Section: Rules page    

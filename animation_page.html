@@ -15,14 +15,17 @@ This contains the meta information, the title and the link to the css style shee
 
 
 <body>
-    <section class = "box backgroundLightBlue" class = "animation">
-        <img class ="border flip-vertically" src="Images\borderLong.png" alt="border image">
-        <video autoplay class = "animation width100">
-            <source src="Images\animation.mp4" type="video/mp4">
-          </video>
-          <img class ="border" src="Images\borderLong.png" alt="border image">
+    <section class = "animation-container">
+        <section id = "ani-border" class = "box backgroundLightBlue animation-item" class = "animation">
+            <img class ="border flip-vertically" src="Images\borderLong.png" alt="border image">
+            <video id = "animation" autoplay class = "animation width100">
+                <source src="Images\animation.mp4" type="video/mp4">
+              </video>
+              <img class ="border" src="Images\borderLong.png" alt="border image">
+        </section>
+    
+        <section class = "animation-item">
+            <a href="Lore_page.html"><button class="button backgroundDarkBlue centre-text white float-right">Next</button></a>    
+        </section>
     </section>
-    <a href="Lore_page.html"><button class="button backgroundDarkBlue centre-text white float-right">Next</button></a>
-
-
 </body>
