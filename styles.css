@@ -299,12 +299,20 @@ im touching stuff
        justify-content: space-between;
    }
 
-   #title,
-   #border-under-title {
+   #title {
     height: 100px;
-    width: 100px;
+    width: 290px;
     display: flex;
     justify-content: flex-start;
+    align-self: center;
+   }
+
+   #border-under-title {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-self: center;
+
    }
 
 
@@ -360,6 +368,7 @@ im touching stuff
     flex-direction: column;
     align-items: center;
 
+
    }
 
    #inner-senario-box{
@@ -370,7 +379,11 @@ im touching stuff
     color: white;
     display: flex;
     justify-content: center;
+    align-self: flex-end;
    }
+
+   
+    
 
    /* ============================
 Section: popups test   
