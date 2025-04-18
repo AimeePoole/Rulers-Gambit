@@ -367,8 +367,6 @@ im touching stuff
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
    }
 
    #inner-senario-box{
@@ -380,6 +378,12 @@ im touching stuff
     display: flex;
     justify-content: center;
     align-self: flex-end;
+   }
+
+   #inner-senario-box-perent{
+    background-color: #590749;
+    display: flex;
+    justify-content: flex-end;
    }
 
    
