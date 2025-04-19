@@ -3,12 +3,19 @@
 /* ============================
    Section: Body and useful 
    ============================ */
-   body {
+body {
     background-color: #ead8c1;
     color: #000000;
     font-family: "Lucida Console", "Courier New", monospace;
     cursor: url('Images/pixel-cursor.png'), auto;
-}  
+}
+
+/*it's 1am and I'm making cursors <3*/
+/*this shows a pixelated hand when the user hovers over links*/
+
+a {
+    cursor: url('Images/hand-cursor.png'), auto;
+}
 
 .centre-text {
     text-align: center;
@@ -18,20 +25,20 @@
 
 /* ============================
    Section: Object widths
+   Description: this sets an object to be 100% or %0% the width of its parent container
    ============================ */
 .width100 {
     width: 100%;
+    height: auto;
 }
 
 .width50 {
     width: 50%;
 }
 
-
-
-
 /* ============================
    Section: Boxes
+   Description: These are two boxes with rounded corners, padding and margins
    ============================ */
 .box {
     margin: 10px;
@@ -39,13 +46,12 @@
     padding: 10px 30px;
 }
 
+/*this has more padding sas its used as a border around another box*/
 .borderBox {
     margin: 10px;
     border-radius: 15px;
     padding: 20px;
 }
-
-
 
 
 /* =========================================
@@ -84,12 +90,14 @@
 
 /* ============================
    Section: Buttons
+   Description: this is the styling for the buttons. there are 3 sizes each with different font sizes and rounded corners
    ============================ */
 
 .button {
 
     font-size: 18px;
     cursor: url('Images/hand-cursor.png'), auto;
+    /*this shows a pixelated hand when the user hovers over buttons*/
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
@@ -100,6 +108,7 @@
 
     font-size: 24px;
     cursor: url('Images/hand-cursor.png'), auto;
+    /*this shows a pixelated hand when the user hovers over buttons*/
     border-radius: 5px;
     padding: 15px;
     margin: 10px;
@@ -109,34 +118,28 @@
 .buttonSmall {
     font-size: 16px;
     cursor: url('Images/hand-cursor.png'), auto;
+    /*this shows a pixelated hand when the user hovers over buttons*/
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
     width: 140px;
 }
 
-.white a {
-    color: white;
-    text-decoration: none;
-}
-
-.float-right
-{
-float: right;
+/*floats the buttons right when needed*/
+.float-right {
+    float: right;
 }
 
 
 /* ============================
    Section: Borders
+   Description: this sets the size of the border to be 100% of its container and flipped it when necessary 
+   (so there can be a border on the top and bottom thatare mirrored)
    ============================ */
 .flip-vertically {
     transform: scaleY(-1);
 }
 
-.border {
-    width: 100%;
-    height: auto;
-}
 
 
 
@@ -144,18 +147,22 @@ float: right;
 Section: Home_Page   
 ============================ */
 
+/*
+This lets the OxAndTree image grows to 30% of the screen until the screen size reaches 1000px
+*/
 .OxAndTree {
     width: 420px;
     height: auto;
 }
 
+/* I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/ but changed the amount of pixels*/
 @media (max-width: 1000px) {
     .OxAndTree {
-      width:30%;
+        width: 30%;
     }
 }
 
-
+/*This starts on a new line, and takes up the whole width like a paragraph*/
 .title-image {
     display: block;
     margin-left: auto;
@@ -171,6 +178,7 @@ Section: Home_Page
     justify-content: space-evenly;
 }
 
+/*this uses a flex box to have the buttons be on one side of the screen with the OxAndTree on the other*/
 #flexbox-home-image-buttons {
     margin: auto;
     display: flex;
@@ -184,16 +192,14 @@ Section: Home_Page
 /* ============================
 Section: Lore_Page   
 ============================ */
-#lore-map {
-    width: 100%;
-    height: auto;
-}
 
+/*flex box container where items are in rows until the screen is too small then it is in a column*/
 .lore-container {
     display: flex;
     flex-direction: row;
 }
 
+/* I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/ but changed the amount of pixels*/
 @media (max-width: 1000px) {
     .lore-container {
         flex-direction: column;
@@ -204,30 +210,33 @@ Section: Lore_Page
 /* ============================
    Section: animation_page
    ============================ */
+
+/*this makes the aanimation fill almost the full screen*/
 .animation {
     max-height: 97vh;
     max-width: 100%;
-    border-radius: 10%; 
+    border-radius: 10%;
 }
 
-.animation-container
-{
+/*this flex box puts the nex button on the same line as the animation*/
+.animation-container {
     display: flex;
-    flex-direction: row;
-    justify-content:space-between;
+    flex-direction: roanimationw;
+    justify-content: space-between;
     align-items: end;
     max-width: 100%;
 }
 
-.animation-item
-{
+.animation-item {
     max-height: 96vh;
 }
+
+
 /* ============================
 Section: Rules page    
 im touching stuff 
 ============================ */
-#Rules-example{
+#Rules-example {
     margin: 10px;
     border-radius: 15px;
     padding: 10px 30px;
@@ -235,7 +244,7 @@ im touching stuff
     color: white;
 }
 
-.Rules-Example-option{
+.Rules-Example-option {
     display: flex;
     justify-content: flex-start;
     font-weight: bold;
@@ -252,50 +261,47 @@ im touching stuff
    Section: stats_page
    ============================ */
 
-   .stats-borders
-   {
-       width: 80%;
-       margin: 3% auto;
-       height: 95vh;
-       border-radius: 40px;
-       margin-top: 0px;
-       margin-bottom: 0px;
-       padding: 0px;
-   }
-   
-   #countries
-   {
-       overflow: scroll;
-   }
-   
-   .stats-container {
-       display: flex;
-       flex-direction: row;
-       height: 95vh;
-   }
-   
-   .stats-item {
-       width: 50%;
-   }
-   
-   .country-container {
-       display: flex;
-       flex-direction: column;
-       height: 95vh;
-   }
-   
-   .stats-image
-   {
-       width: 40%;
-       margin: 20px;
-   }
-   
-   .stats-form
-   {
-       display: flex;
-       flex-direction: row;
-       justify-content:space-between;
-   }
+/*this creates a border on the sides so the elements don't stretch too much*/
+.stats-borders {
+    width: 80%;
+    margin: 3% auto;
+    height: 95vh;
+    border-radius: 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+/*this lets the element scroll to see any overflow*/
+#countries {
+    overflow: scroll;
+}
+
+/*this container contains two items the stats and the map & country details*/
+.stats-container {
+    display: flex;
+    flex-direction: row;
+    height: 95vh;
+}
+
+/*this container contains two items tyhe map and the country details*/
+.country-container {
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+}
+
+.stats-image {
+    width: 40%;
+    margin: 20px;
+}
+
+/*this is the styling for the form*/
+.stats-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 
 /* ============================
@@ -303,58 +309,58 @@ im touching stuff
    MAIN PAGE AHH
    ============================ */
 
-   #Senario-body{
-       width: 100%;
-       background-color: purple;
-       margin: 0.5% auto;
-       height: 80vh;
-       border-radius: 40px;
-       display: flex;
-       flex-direction: row;
-       justify-content: space-between;
-   }
+#Senario-body {
+    width: 100%;
+    background-color: purple;
+    margin: 0.5% auto;
+    height: 80vh;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
-   #title {
+#title {
     height: 100px;
     width: 290px;
     display: flex;
     justify-content: flex-start;
     align-self: center;
-   }
+}
 
-   #border-under-title {
+#border-under-title {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-self: center;
 
-   }
+}
 
 
-   #main-page-border{
+#main-page-border {
     width: 60%;
-   }
+}
 
-   #stats_title{
+#stats_title {
     display: flex;
     width: 25%;
-   }
+}
 
-   .left-side{
+.left-side {
     width: 40%;
     display: flex;
     flex-direction: column;
     background-color: #ebf448;
-   }
+}
 
-   .right-side{
+.right-side {
     width: 60%;
     display: flex;
     flex-direction: column;
     background-color: #ed153d;
-   }
+}
 
-   #stats-box{
+#stats-box {
     margin: 10px;
     border-radius: 15px;
     padding: 10px 30px;
@@ -363,16 +369,16 @@ im touching stuff
     color: white;
     display: flex;
     justify-content: center;
-   }
+}
 
-   #main-page-map{
+#main-page-map {
     height: auto;
     display: flex;
     flex-direction: column;
     width: 100%;
-   }
+}
 
-   #senario-box{
+#senario-box {
     margin: 10px;
     border-radius: 15px;
     padding: 10px 30px;
@@ -382,9 +388,9 @@ im touching stuff
     display: flex;
     flex-direction: column;
     align-items: center;
-   }
+}
 
-   #inner-senario-box{
+#inner-senario-box {
     margin: 10px;
     border-radius: 15px;
     padding: 10px 30px;
@@ -393,38 +399,40 @@ im touching stuff
     display: flex;
     justify-content: center;
     align-self: flex-end;
-   }
+}
 
-   #inner-senario-box-perent{
+#inner-senario-box-perent {
     background-color: #590749;
     display: flex;
     justify-content: flex-end;
-   }
+}
 
-   
-    
 
-   /* ============================
+
+
+/* ============================
 Section: popups test   
 ============================ */
 
-  /*https://www.geeksforgeeks.org/how-to-create-popup-box-using-html-and-css/*/
-  
+/*https://www.geeksforgeeks.org/how-to-create-popup-box-using-html-and-css/*/
+
 
 
 .popup {
     display: none;
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
 }
+
 .popup-content {
     background: #fff;
     padding: 20px;
     border-radius: 5px;
     text-align: center;
 }
-
