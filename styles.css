@@ -372,7 +372,7 @@ im touching stuff
 }
 
 #main-page-map {
-    height: auto;
+    height: 250px;
     display: flex;
     flex-direction: column;
     width: 100%;
