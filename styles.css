@@ -313,7 +313,7 @@ im touching stuff
     width: 100%;
     background-color: purple;
     margin: 0.5% auto;
-    height: 80vh;
+    height: 95vh;
     border-radius: 40px;
     display: flex;
     flex-direction: row;
@@ -364,18 +364,20 @@ im touching stuff
     margin: 10px;
     border-radius: 15px;
     padding: 10px 30px;
-    height: 75vh;
+    height: 85vh;
     background-color: #444484;
     color: white;
     display: flex;
+    align-content: center;
     justify-content: center;
+
 }
 
 #main-page-map {
-    height: 250px;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    align-content: center;
+    width: 70%;
 }
 
 #senario-box {
@@ -394,6 +396,7 @@ im touching stuff
     margin: 10px;
     border-radius: 15px;
     padding: 10px 30px;
+    height: 30vh;
     background-color: #448453;
     color: white;
     display: flex;
