@@ -376,7 +376,7 @@ im touching stuff
 #main-page-map {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    justify-content: center;
     width: 70%;
 }
 
