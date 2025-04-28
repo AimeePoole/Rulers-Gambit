@@ -311,9 +311,8 @@ im touching stuff
 
 #Senario-body {
     width: 100%;
-    background-color: purple;
     margin: 0.5% auto;
-    height: 95vh;
+    height: auto;
     border-radius: 40px;
     display: flex;
     flex-direction: row;
@@ -333,7 +332,6 @@ im touching stuff
     display: flex;
     justify-content: flex-start;
     align-self: center;
-
 }
 
 
@@ -341,34 +339,40 @@ im touching stuff
     width: 60%;
 }
 
+#inner-page-border {
+    width: 60%;
+    height: 30%;
+}
+
 #stats_title {
-    display: flex;
     width: 25%;
+    height: 20%;
 }
 
 .left-side {
     width: 40%;
+    height: auto;
     display: flex;
     flex-direction: column;
-    background-color: #ebf448;
 }
 
 .right-side {
     width: 60%;
+    height: auto;
     display: flex;
     flex-direction: column;
-    background-color: #ed153d;
 }
 
 #stats-box {
     margin: 10px;
     border-radius: 15px;
     padding: 10px 30px;
-    height: 85vh;
+    height: 35%;
     background-color: #444484;
     color: white;
     display: flex;
     align-content: center;
+    justify-content: space-between;
 }
 
 #main-page-map {
@@ -388,6 +392,7 @@ im touching stuff
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 #inner-senario-box {
@@ -398,16 +403,17 @@ im touching stuff
     background-color: #448453;
     color: white;
     display: flex;
+    justify-content: space-between;
     justify-content: center;
-    align-self: flex-end;
+    
 }
 
-#inner-senario-box-perent {
+/* #inner-senario-box-perent {
     background-color: #590749;
     display: flex;
-    justify-content: flex-end;
+    
 }
-
+*/
 
 
 
