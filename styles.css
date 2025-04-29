@@ -274,7 +274,7 @@ im touching stuff
 
 /*this lets the element scroll to see any overflow*/
 #countries {
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 /*this container contains two items the stats and the map & country details*/
