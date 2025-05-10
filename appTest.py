@@ -21,8 +21,16 @@ def find_all():
     cursor = db.cursor()
 
     # get all scenario
-    cursor.execute('SELECT id, scenarioDescription FROM scenario')
-    data = with_labels(cursor.fetchall(), ("id", "scenarioDescription"))    
+    cursor.execute('SELECT scenario.id AS scenario_id,' \
+    'scenario.scenarioDescription,' \
+    'catagory.catagoryName,' \
+    'phase.phaseName,' \
+    'options.id AS option_id,' \
+    'options.optionDescription FROM scenario ' \
+    'LEFT JOIN catagory ON scenario.catagory_id = catagory.id ' \
+    'LEFT JOIN phase ON scenario.phase_id = phase.id ' \
+    'LEFT JOIN options ON options.scenario_id = scenario.id;')
+    data = with_labels(cursor.fetchall(), ("id", "scenarioDescription","catagoryName","phaseName","option_id","optionDescription"))    
     return jsonify(data)
 
 if __name__ == '__main__':
