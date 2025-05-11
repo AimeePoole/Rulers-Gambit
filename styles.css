@@ -197,12 +197,25 @@ Section: Lore_Page
 .lore-container {
     display: flex;
     flex-direction: row;
+    box-sizing: border-box;
+}
+
+/*stretch lets the item fill the container*/
+.lore-item {
+    align-self: stretch;
+    box-sizing: border-box;
 }
 
 /* I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/ but changed the amount of pixels*/
 @media (max-width: 1000px) {
     .lore-container {
         flex-direction: column;
+    }
+
+    .lore-item {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
     }
 }
 
@@ -405,7 +418,7 @@ im touching stuff
     display: flex;
     justify-content: space-between;
     justify-content: center;
-    
+
 }
 
 /* #inner-senario-box-perent {
