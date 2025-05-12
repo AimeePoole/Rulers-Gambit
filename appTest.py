@@ -1,5 +1,11 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS, cross_origin
 import sqlite3
+
+appTest = Flask(__name__)
+CORS(appTest)
+
+
 
 # given an array of rows, each of which is an array, add the given labels to each row
 def with_labels(rows, labels):
@@ -8,13 +14,15 @@ def with_labels(rows, labels):
 
 app = Flask(__name__)
 
-# lets you test the app is ronnung
-@app.route('/', methods=['GET', 'POST'])
-def hello_world():
-    return "Hello, world!", 200
+@app.route("/hello")
+@cross_origin(origins="http://127.0.0.1:5501")
+def scenario():
+    return jsonify({"message": "Hello from Flask!"})
 
-# retrieve all books
+
 @app.route('/scenario', methods=['GET'])
+@cross_origin(origins="http://127.0.0.1:5501")
+
 def find_all():
     db = sqlite3.connect('databaseTest.db')
     #a cursor lets you Send SQL queries to the database (e.g., SELECT, INSERT, UPDATE, DELETE) and fetch results from those queries
