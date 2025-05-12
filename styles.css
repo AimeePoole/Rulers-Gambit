@@ -334,6 +334,11 @@ Section: Lore_Page
     max-height: 96vh;
 }
 
+#animation
+{
+    max-height: 80dvh;
+}
+
 
 /* ============================
 Section: Rules page    
