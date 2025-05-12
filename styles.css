@@ -8,14 +8,14 @@ body {
     background-color: #ead8c1;
     color: #000000;
     font-family: "Lucida Console", "Courier New", monospace;
-    cursor: url('Images/pixel-cursor.png'), auto;
+    cursor: url('Media/pixel-cursor.png'), auto;
 }
 
 /*it's 1am and I'm making cursors <3*/
 /*this shows a pixelated hand when the user hovers over links*/
 
 a {
-    cursor: url('Images/hand-cursor.png'), auto;
+    cursor: url('Media/hand-cursor.png'), auto;
 }
 
 .centre-text {
@@ -101,7 +101,7 @@ a {
 .button {
 
     font-size: 18px;
-    cursor: url('Images/hand-cursor.png'), auto;
+    cursor: url('Media/hand-cursor.png'), auto;
     /*this shows a pixelated hand when the user hovers over buttons*/
     border-radius: 5px;
     padding: 10px;
@@ -112,7 +112,7 @@ a {
 .buttonLarge {
 
     font-size: 24px;
-    cursor: url('Images/hand-cursor.png'), auto;
+    cursor: url('Media/hand-cursor.png'), auto;
     /*this shows a pixelated hand when the user hovers over buttons*/
     border-radius: 5px;
     padding: 15px;
@@ -122,7 +122,7 @@ a {
 
 .buttonSmall {
     font-size: 16px;
-    cursor: url('Images/hand-cursor.png'), auto;
+    cursor: url('Media/hand-cursor.png'), auto;
     /*this shows a pixelated hand when the user hovers over buttons*/
     border-radius: 5px;
     padding: 5px;
