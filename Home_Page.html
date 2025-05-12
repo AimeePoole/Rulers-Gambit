@@ -1,49 +1,47 @@
-<!-- inactive -->
+<!--inactive -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<!-- 
+This contains the meta information, the title and the link to the css style sheet
+-->
 <head>
-    <title>Ruler's Gambit</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--  this displays a small image of an ox and a tree in the browser tab -->
-    <link rel="icon" type="image/x-icon" href="Images\faviconCrown.ico">
+    <link rel="icon" type="image/x-icon" href="Images\favicon.ico">
+    <title>The Lore</title>
     <link href="styles.css" rel="stylesheet">
 </head>
 
-<body>
-    <section id = "homepage">
-        <img class = "title-image" src="Images\RulersGambitTitle.png" alt = "Ruler's Gambit title">
+<body id = "home" style="margin: 0;">
+
+    <section class = "home-main-container">
         
-        <section id = "flexbox-home-buttons">
-            <a href="animation_page.html"><button class="buttonLarge backgroundDarkBlue centre-text white">Play</button></a>
-            <a href="Rules.html"><button class="buttonLarge backgroundDarkBlue centre-text white">Rules</button></a>
-        </section>
+            <img class = "home-main-item title-image" src="Images\RulersGambitTitle.png" alt = "Ruler's Gambit title">
 
-
-        <section id = "flexbox-home-image-buttons">
-            <section>
-                <a href="leaderboard_page.html"><button class="button backgroundDarkBlue centre-text white">Leaderboard</button></a>
-                <a href="Settings_Page.html"><button class="button backgroundDarkBlue centre-text white">Settings</button></a>   
-            </section>
+        <section class = "home-main-item button-container-big margin-box">
+                <a href="animation_page.html"><button class="button-item buttonLarge backgroundDarkBlue centre-text white">Play</button></a>
+                <a href="Rules.html"><button class="button-item buttonLarge backgroundDarkBlue centre-text white">Rules</button></a>
             
-            <!--Section needed to have the fig caption appear under image-->
-            <section>
-                            <img class = "OxAndTree" src="Images\OxAndTree.png"> <figcaption>Fig.1 - An ox under a tree</figcaption>
+        </section>
+        
+
+        <section class = "home-sub-container home-main-item">
+            <section class = "home-sub-item margin-box button-container-small">
+                <a href="leaderboard_page.html"><button class="button-item button backgroundDarkBlue centre-text white">Leaderboard</button></a>
+                <a href="Settings_Page.html"><button class="button-item button backgroundDarkBlue centre-text white">Settings</button></a>   
+            </section>
+
+            <section class = "home-sub-item margin-box">
+                <img class = "OxAndTree" src="Images\OxAndTree.png"> <figcaption>Fig.1 - An ox under a tree</figcaption>
             </section>
         </section>
-    </section>   
-    
-    <!--
-     <audio autoplay loop>
-        <source src="Images/epic-drums-216819.mp3" type="audio/mpeg">
-    </audio>
-    -->
+
+        <p>
+            Music by <a href="https://pixabay.com/users/playsound-24686998/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=216819">Playsound</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=216819">Pixabay</a>
+        </p>
+
+    </section>
     
 </body>
-
-<footer>
-    <p class = "credit">
-        Music by <a href="https://pixabay.com/users/playsound-24686998/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=216819">Playsound</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=216819">Pixabay</a>
-    </p>
-</footer>
-</html>

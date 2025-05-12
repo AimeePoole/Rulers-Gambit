@@ -4,6 +4,7 @@
    Section: Body and useful 
    ============================ */
 body {
+    height: 100%;
     background-color: #ead8c1;
     color: #000000;
     font-family: "Lucida Console", "Courier New", monospace;
@@ -146,23 +147,26 @@ a {
 /* ============================
 Section: Home_Page   
 ============================ */
-
-/*
+/* OLD CODE
 This lets the OxAndTree image grows to 30% of the screen until the screen size reaches 1000px
-*/
+
 .OxAndTree {
     width: 420px;
     height: auto;
 }
 
-/* I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/ but changed the amount of pixels*/
+/* 
+I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/ but changed the amount of pixels
+
 @media (max-width: 1000px) {
     .OxAndTree {
         width: 30%;
     }
 }
 
-/*This starts on a new line, and takes up the whole width like a paragraph*/
+/*
+This starts on a new line, and takes up the whole width like a paragraph
+
 .title-image {
     display: block;
     margin-left: auto;
@@ -171,21 +175,107 @@ This lets the OxAndTree image grows to 30% of the screen until the screen size r
     height: auto;
 }
 
-/*used for the buttons on home screen*/
+/*
+used for the buttons on home screen
+
 #flexbox-home-buttons {
     margin: auto;
     display: flex;
     justify-content: space-evenly;
 }
 
-/*this uses a flex box to have the buttons be on one side of the screen with the OxAndTree on the other*/
+/*
+this uses a flex box to have the buttons be on one side of the screen with the OxAndTree on the other
+
 #flexbox-home-image-buttons {
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: end;
 }
+*/
 
+
+/*!important wouldn't work for over writting so I resorted to inline styling*/
+body#home
+{
+    margin: 0px !important;
+    padding: 0px !important;
+    height: 100%;
+}
+
+.margin-box {
+    margin: 10px;
+    padding: 10px;
+}
+
+
+
+.home-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    /* Ensures it fills the entire screen */
+    box-sizing: border-box;
+
+}
+
+.home-main-item {
+    align-self: stretch;
+    box-sizing: border-box;
+    align-self: center;
+    justify-content: flex-start; /* Align to the top of the screen */
+}
+
+
+
+.home-sub-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-self: stretch;
+    box-sizing: border-box;
+}
+
+.home-sub-item {
+    align-self: stretch;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    flex-wrap: wrap;        
+}
+
+.title-image {
+    padding: 5px;
+    align-self: center;
+    width: 80%;
+    object-fit: contain;   /* makes image fit in  box without cutting off */
+}
+
+.OxAndTree {
+    max-height: 30vh;
+    display: block;
+}
+
+.button-container-big {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-self: stretch;
+    box-sizing: border-box;
+    flex-wrap: wrap;         
+}
+
+.button-container-small
+{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-self: stretch;
+    box-sizing: border-box;
+    flex-wrap: wrap;         
+}
 
 
 
@@ -234,7 +324,7 @@ Section: Lore_Page
 /*this flex box puts the nex button on the same line as the animation*/
 .animation-container {
     display: flex;
-    flex-direction: roanimationw;
+    flex-direction: row;
     justify-content: space-between;
     align-items: end;
     max-width: 100%;
