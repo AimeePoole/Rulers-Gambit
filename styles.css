@@ -331,7 +331,7 @@ Section: Lore_Page
 }
 
 .animation-item {
-    max-height: 96vh;
+    max-height: 96dvh;
 }
 
 #animation
