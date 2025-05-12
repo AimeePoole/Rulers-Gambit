@@ -4,6 +4,7 @@ import sqlite3
 
 appTest = Flask(__name__)
 CORS(appTest)
+jsOrigin = "http://127.0.0.1:5501"
 
 
 
@@ -15,13 +16,13 @@ def with_labels(rows, labels):
 app = Flask(__name__)
 
 @app.route("/hello")
-@cross_origin(origins="http://127.0.0.1:5501")
+@cross_origin(origins = jsOrigin)
 def scenario():
     return jsonify({"message": "Hello from Flask!"})
 
 
 @app.route('/scenario', methods=['GET'])
-@cross_origin(origins="http://127.0.0.1:5501")
+@cross_origin(origins = jsOrigin)
 
 def find_all():
     db = sqlite3.connect('databaseTest.db')
