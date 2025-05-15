@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS, cross_origin
 import sqlite3
+import random
 
 appTest = Flask(__name__)
 CORS(appTest)
@@ -44,9 +45,37 @@ def find_all():
 
 
 
+#this groups the options and scenarios and just shows that
+@app.route('/scenarioDetails', methods=['GET'])
+@cross_origin(origins=jsOrigin)
+def find():
+    db = sqlite3.connect('databaseTest.db')
+    cursor = db.cursor()
 
+    cursor.execute('''
+        SELECT 
+            scenario.id AS scenario_id,
+            scenario.scenarioDescription,
+            options.optionDescription
+        FROM scenario
+        LEFT JOIN options ON options.scenario_id = scenario.id
+    ''')
 
+    rows = cursor.fetchall()
 
+    # Group the options by scenario so the scenario isnt printed every time
+    scenarios = {}
+    for scenario_id, scenario_desc, option_desc in rows:
+        if scenario_id not in scenarios:
+            scenarios[scenario_id] = {
+                "id": scenario_id,
+                "scenarioDescription": scenario_desc,
+                "options": []
+            }
+        if option_desc:
+            scenarios[scenario_id]["options"].append(option_desc)
+
+    return jsonify(list(scenarios.values()))
 
 
 
@@ -57,7 +86,7 @@ def find_all():
 #post test
 @app.route('/scenarioPost', methods=['POST'])
 @cross_origin(origins = jsOrigin)
-def rate():
+def scenario_Post():
     db = sqlite3.connect('databaseTest.db' , timeout=30)
     cursor = db.cursor()
 
@@ -72,6 +101,26 @@ def rate():
     return jsonify(data)
 
 
+
+
+
+
+#post test
+@app.route('/optionPost', methods=['POST'])
+@cross_origin(origins = jsOrigin)
+def option_Post():
+    db = sqlite3.connect('databaseTest.db' , timeout=30)
+    cursor = db.cursor()
+
+ 
+    cursor.execute('INSERT OR IGNORE INTO scenario\
+    (id, scenarioDescription, catagory_id, phase_id) ' \
+    'VALUES ("s3", "A heatwave has swept the nation, resulting in civil unrest and exstresive damage to crops. You must find a way to rectifi the sitchuation will you?", "c1","p1")')
+
+
+    db.commit()
+    data = with_labels(cursor.fetchall(), ("id", "scenarioDescription","catagoryName","phaseName"))    
+    return jsonify(data)
 
 
 
