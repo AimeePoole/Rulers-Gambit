@@ -3,10 +3,9 @@ from flask_cors import CORS, cross_origin
 import sqlite3
 import random
 
-appTest = Flask(__name__)
-CORS(appTest)
-jsOrigin = "http://127.0.0.1:5501"
+app = Flask(__name__)
 
+CORS(app)
 
 
 # given an array of rows, each of which is an array, add the given labels to each row
@@ -14,16 +13,13 @@ def with_labels(rows, labels):
     return [dict((labels[i], value) for i, value in enumerate(row)) for row in rows]
 
 
-app = Flask(__name__)
 
 @app.route("/hello")
-@cross_origin(origins = jsOrigin)
 def scenario():
     return jsonify({"message": "Hello from Flask!"})
 
 
 @app.route('/scenario', methods=['GET'])
-@cross_origin(origins = jsOrigin)
 def find_all():
     db = sqlite3.connect('databaseTest.db')
     #a cursor lets you Send SQL queries to the database (e.g., SELECT, INSERT, UPDATE, DELETE) and fetch results from those queries
@@ -47,7 +43,6 @@ def find_all():
 
 #this groups the options and scenarios and just shows that
 @app.route('/scenarioDetails', methods=['GET'])
-@cross_origin(origins=jsOrigin)
 def find():
     db = sqlite3.connect('databaseTest.db')
     cursor = db.cursor()
@@ -85,7 +80,6 @@ def find():
 
 #post test
 @app.route('/scenarioPost', methods=['POST'])
-@cross_origin(origins = jsOrigin)
 def scenario_Post():
     db = sqlite3.connect('databaseTest.db' , timeout=30)
     cursor = db.cursor()
@@ -107,7 +101,6 @@ def scenario_Post():
 
 #post test
 @app.route('/optionPost', methods=['POST'])
-@cross_origin(origins = jsOrigin)
 def option_Post():
     db = sqlite3.connect('databaseTest.db' , timeout=30)
     cursor = db.cursor()
