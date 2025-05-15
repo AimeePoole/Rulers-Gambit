@@ -132,5 +132,25 @@ def option_Post():
 
 
 
+
+
+
+@app.route('/post', methods=['POST'])
+def receive_input():
+    data = request.get_json()
+    username = data.get('username')
+    
+    # Example: Save to database or do something with it
+    print("Received from user:", username)
+
+    return jsonify({"message": "Received", "input": username})
+
+
+
+
+
+
+
+
 if __name__ == '__main__':
     app.run(host="127.0.0.1", port=8000, debug=True)
