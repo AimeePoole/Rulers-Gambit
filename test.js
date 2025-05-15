@@ -1,3 +1,5 @@
+
+/*
 fetch('http://127.0.0.1:8000/scenario')
     .then(function (response) {
         return response.text();
@@ -5,6 +7,7 @@ fetch('http://127.0.0.1:8000/scenario')
         console.log('GET response text:');
         console.log(text);
     });
+*/
 
 
 fetch('http://127.0.0.1:8000/scenarioDetails')
