@@ -17,3 +17,18 @@ fetch('http://127.0.0.1:8000/scenarioDetails')
         console.log(text); 
     });
 
+
+//https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+//this is an example of a post request that gets a username entered by the user
+function sendInput() {
+    //this gets the entered user name and posts it to the
+    const usernameInput = document.getElementById('username').value;
+    fetch("http://127.0.0.1:8000/post", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ username: usernameInput }),
+    });
+}
+
