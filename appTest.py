@@ -51,6 +51,7 @@ def find():
         SELECT 
             scenario.id AS scenario_id,
             scenario.scenarioDescription,
+            options.id,
             options.optionDescription
         FROM scenario
         LEFT JOIN options ON options.scenario_id = scenario.id
@@ -60,18 +61,28 @@ def find():
 
     # Group the options by scenario so the scenario isnt printed every time
     scenarios = {}
-    for scenario_id, scenario_desc, option_desc in rows:
+    for scenario_id, scenario_desc, option_id, option_desc in rows:
         if scenario_id not in scenarios:
+            #https://pythonguides.com/dictionaries/
+            #https://docs.python.org/3/tutorial/datastructures.html#dictionaries
+            #https://www.geeksforgeeks.org/add-a-keyvalue-pair-to-dictionary-in-python/  - Using square brackets []
+            #https://jsonapi.org/format/#document-resource-objects
             scenarios[scenario_id] = {
                 "id": scenario_id,
                 "scenarioDescription": scenario_desc,
                 "options": []
             }
+        #https://realpython.com/python-nested-dictionaries/
         if option_desc:
-            scenarios[scenario_id]["options"].append(option_desc)
-
+            scenarios[scenario_id]["options"].append({
+                "option_id": option_id,
+                "optionDescription": option_desc
+            })    
+        
     return jsonify(list(scenarios.values()))
 
+# Access a value
+#print(scenarios['scenario_id'])
 
 
 
