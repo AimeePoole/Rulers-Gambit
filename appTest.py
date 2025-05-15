@@ -114,6 +114,7 @@ def scenario_Post():
 
 
 #post test
+#What i need to do for this test is get the option-id and use that to find the option mechanics but they havent been created yet
 @app.route('/optionPost', methods=['POST'])
 def option_Post():
     db = sqlite3.connect('databaseTest.db' , timeout=30)
@@ -128,7 +129,6 @@ def option_Post():
     db.commit()
     data = with_labels(cursor.fetchall(), ("id", "scenarioDescription","catagoryName","phaseName"))    
     return jsonify(data)
-
 
 
 
