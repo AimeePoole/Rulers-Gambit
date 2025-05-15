@@ -79,7 +79,10 @@ def find():
                 "optionDescription": option_desc
             })    
         
-    return jsonify(list(scenarios.values()))
+    #https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary
+    #https://bobbyhadz.com/blog/python-get-random-key-value-from-dictionary
+    random_scenario = random.choice(list(scenarios.values()))
+    return jsonify(random_scenario)
 
 # Access a value
 #print(scenarios['scenario_id'])
