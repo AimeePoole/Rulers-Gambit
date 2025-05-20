@@ -31,6 +31,24 @@ connect.execute(
 
 
 connect.execute(
+    'CREATE TABLE IF NOT EXISTS stats (\
+        id text PRIMARY KEY,\
+        statName text NOT NULL\
+    )'
+)
+
+connect.execute(
+    'CREATE TABLE IF NOT EXISTS affects (\
+        stat_id TEXT,\
+        optionMechanic INT NOT NULL,\
+        option_id TEXT, \
+        PRIMARY KEY (stat_id, option_id),\
+        FOREIGN KEY (stat_id) REFERENCES stat(id),\
+        FOREIGN KEY (option_id) REFERENCES option(id)\
+    )'
+)
+
+connect.execute(
     'CREATE TABLE IF NOT EXISTS options (\
        id text PRIMARY KEY,\
         optionDescription text NOT NULL, \
@@ -48,6 +66,7 @@ cursor.execute('INSERT INTO catagory\
 cursor.execute('INSERT INTO phase\
     (id, phaseName) ' \
     'VALUES ("p1", "Phase 1")')
+
 
 
 cursor.execute('INSERT INTO scenario \
@@ -71,7 +90,44 @@ cursor.execute('INSERT INTO options \
     ("o32", "Fund a mass research project", "s3"), \
     ("o33", "Cull the few to protect the many, kill a small population to conserve resources", "s3"), \
     ("o34", "Cry", "s3")')
+cursor.execute('INSERT INTO affects \
+    (stat_id, optionMechanic, option_id) VALUES \
+    ("6","2","o11"), \
+    ("4","-2","o11"), \
+    ("6","-2","o12"), \
+    ("4","+1","o12"), \
+    ("3","-2","o12"), \
+    ("6","1","o13"), \
+    ("4","1","o13"), \
+    ("6","-6","o14"), \
+    ("4","1","o21"), \
+    ("1","-1","o21"), \
+    ("1", "2","o22"), \
+    ("4", "-2","o22"), \
+    ("4", "-2","o23"), \
+    ("1", "-2","o23"), \
+    ("4", "-2","o24"), \
+    ("1", "-2","o24"), \
+    ("4", "-2","o31"), \
+    ("3", "-1","o31"), \
+    ("1", "-2","o32"), \
+    ("5", "2","o32"), \
+    ("4", "-1","o32"), \
+    ("4", "1","o33"), \
+    ("3", "-2","o33"), \
+    ("6", "-1","o34"), \
+    ("4", "-1","o34"), \
+    ("3", "-2","o34")')
 
 
+
+cursor.execute('INSERT INTO stats \
+    (id, statName) VALUES \
+    ("1", "Economy"), \
+    ("2", "Military"), \
+    ("3", "Security"),\
+    ("4", "Welfare"), \
+    ("5", "Education"), \
+    ("6", "Agriculture")' )
 
 connect.commit()
