@@ -172,6 +172,13 @@ def receive_input():
 
 
 
+@app.route('/stats', methods=['POST'])
+def input():
+    data = request.get_json()
+    print(data)
+    return jsonify(data)
+
+
 
 
 
