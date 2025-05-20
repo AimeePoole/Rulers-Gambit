@@ -9,13 +9,22 @@ fetch('http://127.0.0.1:8000/scenario')
     });
 */
 
+function output() {
+    fetch('http://127.0.0.1:8000/scenarioDetails')
+        .then(function (response) {
+            return response.text();
+        }).then(function (text) {
+            console.log(text); 
+            alert(text);
+        });
+}
 
-fetch('http://127.0.0.1:8000/scenarioDetails')
-    .then(function (response) {
-        return response.text();
-    }).then(function (text) {
-        console.log(text); 
-    });
+ function myFunction() {
+            alert('Hello, this is an inline function!');
+        }
+
+
+
 
 
 //https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
