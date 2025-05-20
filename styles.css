@@ -89,17 +89,7 @@ a {
     color: #000000;
 }
 
-/*used for buttons*/
-.backgroundPurple {
-    background-color: #590749;
-    color: rgb(255, 255, 255);
-}
 
-.backgroundPostit
-{
-    background-color: #fff1bc;
-    color: rgb(0, 0, 0);
-}
 
 .backgroundPostitButton
 {
@@ -590,3 +580,8 @@ Section: popups test
     border-radius: 5px;
     text-align: center;
 }
+
+
+
+
+

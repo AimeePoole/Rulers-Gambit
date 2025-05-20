@@ -1,4 +1,24 @@
+function checkSum() {
+    const Economy = parseInt(document.getElementById('economy').value);
+    const Military = parseInt(document.getElementById('military').value);
+    const Security = parseInt(document.getElementById('security').value);
+    const Welfare = parseInt(document.getElementById('welfare').value);
+    const Education = parseInt(document.getElementById('education').value);
+    const Agriculture = parseInt(document.getElementById('agriculture').value)
+    
+      const sum = Economy + Military + Security + Welfare + Education + Agriculture;
+      const resultElement = document.getElementById('result');
 
+      if (sum === 20) {
+        alert("Success! The sum is exactly 20.");
+        window.location.href = "senario_page.html";
+      } else {
+        alert("The sum is wrong. Try again!");
+        resultElement.textContent = `The sum is ${sum}. Try again!`;
+        resultElement.style.color = '#FF3333';
+      }
+      
+}
 
 function sendInputs() {
     //this gets the entered user name and posts it to the python terminal
