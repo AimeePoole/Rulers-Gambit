@@ -10,21 +10,14 @@ fetch('http://127.0.0.1:8000/scenario')
 */
 
 
-function output() {
-    
-    fetch('http://127.0.0.1:8000/scenarioDetails')
-        .then(function (response) {
-            return response.text();
-        }).then(function (text) {
-            console.log(text); 
-            alert(text);
-            x = text.scenarioDescription;
-            document.getElementById("demo").innerHTML = x;
-        });
-}
 
-
-
+fetch('http://127.0.0.1:8000/scenarioDetails')
+  .then(function (response) {
+    return response.json();
+  }).then(function (data) {
+    console.log(data);
+    document.getElementById("demo").innerHTML = data.scenarioDescription;
+  });
 
 
 //https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
