@@ -192,53 +192,6 @@ button:hover{
 /* ============================
 Section: Home_Page   
 ============================ */
-/* OLD CODE
-This lets the OxAndTree image grows to 30% of the screen until the screen size reaches 1000px
-
-.OxAndTree {
-    width: 420px;
-    height: auto;
-}
-
-/* 
-I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/ but changed the amount of pixels
-
-@media (max-width: 1000px) {
-    .OxAndTree {
-        width: 30%;
-    }
-}
-
-/*
-This starts on a new line, and takes up the whole width like a paragraph
-
-.title-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    height: auto;
-}
-
-/*
-used for the buttons on home screen
-
-#flexbox-home-buttons {
-    margin: auto;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-/*
-this uses a flex box to have the buttons be on one side of the screen with the OxAndTree on the other
-
-#flexbox-home-image-buttons {
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-}
-*/
 
 
 /*!important wouldn't work for over writting so I resorted to inline styling*/
@@ -415,46 +368,86 @@ im touching stuff
    Section: stats_page
    ============================ */
 
-/*this creates a border on the sides so the elements don't stretch too much*/
-.stats-borders {
-    width: 80%;
-    margin: 3% auto;
-    height: 95vh;
-    border-radius: 40px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding: 0px;
-}
 
-/*this lets the element scroll to see any overflow*/
-#countries {
-    overflow-y: scroll;
-}
 
-/*this container contains two items the stats and the map & country details*/
-.stats-container {
-    display: flex;
-    flex-direction: row;
-    height: 95vh;
-}
 
-/*this container contains two items tyhe map and the country details*/
-.country-container {
-    display: flex;
-    flex-direction: column;
-    height: 95vh;
-}
+
 
 .stats-image {
     width: 40%;
-    margin: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;    
+    margin-bottom: 20px;
 }
 
-/*this is the styling for the form*/
-.stats-form {
+
+.block {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.block {
+    display: grid;
+    grid-template-columns: 1fr 60px;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+}
+
+.stats-form-item[type="number"] {
+    width: 60px;
+    min-width: 60px;
+    text-align: right;
+}
+
+
+.statsP-container {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.statsP-item {
+    align-self: stretch;
+    box-sizing: border-box;
+}
+
+#enter_stats {
+    flex: 1 1 0px;
+}
+
+#countries_details {
+    flex: 2 1 0px;
+}
+
+.countries-item {
+    box-sizing: border-box;
+    flex: 1 1 0px;
+    align-items: center;
+    justify-content: center;
+}
+.countries-container {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+
+/* I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/ but changed the amount of pixels*/
+@media (max-width: 1000px) {
+    .statsP-container {
+        flex-direction: column;
+    }
+
+    .statsP-item {
+        flex-direction: column;
+        box-sizing: border-box;
+    }
 }
 
 
