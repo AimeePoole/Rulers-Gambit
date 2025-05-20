@@ -18,7 +18,7 @@ fetch('http://127.0.0.1:8000/scenarioDetails')
     console.log(data);
     document.getElementById("demo").innerHTML = data.scenarioDescription;
     // this might work 
-    //document.getElementById("demo").innerHTML = data.id, optionDescription, scenario_id;
+    //document.getElementById("demo").innerHTML = data.id, data.optionDescription, data.scenario_id;
   });
 
 

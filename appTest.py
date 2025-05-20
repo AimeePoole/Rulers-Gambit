@@ -52,16 +52,20 @@ def find():
             scenario.id AS scenario_id,
             scenario.scenarioDescription,
             options.id,
-            options.optionDescription
-        FROM scenario
-        LEFT JOIN options ON options.scenario_id = scenario.id
+            options.optionDescription,
+            affects.optionMechanic,
+            affects.stat_id
+            FROM scenario
+            LEFT JOIN options ON options.scenario_id = scenario.id
+            LEFT JOIN affects ON affects.option_id = options.id
+
     ''')
 
     rows = cursor.fetchall()
 
     # Group the options by scenario so the scenario isnt printed every time
     scenarios = {}
-    for scenario_id, scenario_desc, option_id, option_desc in rows:
+    for scenario_id, scenario_desc, option_id, option_desc, optionMechanic, stat_id in rows:
         if scenario_id not in scenarios:
             #https://pythonguides.com/dictionaries/
             #https://docs.python.org/3/tutorial/datastructures.html#dictionaries
@@ -72,12 +76,32 @@ def find():
                 "scenarioDescription": scenario_desc,
                 "options": []
             }
-        #https://realpython.com/python-nested-dictionaries/
+        
         if option_desc:
-            scenarios[scenario_id]["options"].append({
-                "option_id": option_id,
-                "optionDescription": option_desc
-            })    
+            # Check if the option already exists
+            #Retrieves the next item generator = (expression for item in iterable if condition) 
+            #https://www.pythonmorsels.com/next
+            generator = next((option for option in scenarios[scenario_id]["options"] if option["option_id"] == option_id), None)
+            if not generator:
+                # Add new option if it doesn't exist
+                scenarios[scenario_id]["options"].append({
+                    "option_id": option_id,
+                    "optionDescription": option_desc,
+                    "optionMechanic": []
+                })
+        #Checks whether for an optionMechanic
+        if optionMechanic:
+            # Find the specific option that the current mechanic affects by finding the one with the same option id
+            for option in scenarios[scenario_id]["options"]:
+                #chooses the correct id to add the mechanic to
+                if option["option_id"] == option_id:
+                    #appends the dictionary to have the mechanic
+                    option["optionMechanic"].append({
+                        "stat_id": stat_id,
+                        "optionDescription": optionMechanic
+                    })
+                    break
+
         
     #https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary
     #https://bobbyhadz.com/blog/python-get-random-key-value-from-dictionary
