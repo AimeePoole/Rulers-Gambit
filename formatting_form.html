@@ -3,12 +3,23 @@
 <html lang="en">
 
 <body>
+    
+
+scenarioDescription {{scenarioDescription}}
+<ul>
+    {% for option_id in option_id %}
+    <li> {{ option_description }} </li>
+    {%endfor%}
+</ul>
+
+<p>1 {{scenarioDescription}}</p>
+<ul>
+{{option_id}}
+<li> {{option_description}} </li>
+</ul>
 
 
-    {% for SD in SD %}
-    <li> {{SD.SD|e }} </li>
-    {% endfor %}
-
+<script src="test.js"></script>
 
 
 <!--attemt 1 not jinja just a html form
