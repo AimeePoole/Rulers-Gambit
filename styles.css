@@ -58,6 +58,11 @@ a {
     padding: 20px;
 }
 
+.postit {
+    margin: 10px;
+    padding: 20px;
+}
+
 
 /* =========================================
    Section: Navigation Background colours
@@ -90,8 +95,32 @@ a {
     color: rgb(255, 255, 255);
 }
 
+.backgroundPostit
+{
+    background-color: #fff1bc;
+    color: rgb(0, 0, 0);
+}
 
+.backgroundPostitButton
+{
+    background-color: #edd684;
+    color: rgb(0, 0, 0);
+}
 
+.postit{
+    border-radius: 3px;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    transform-origin: top left; /* Pivot point */
+    transform: rotate(1deg);
+}   
+
+.vignette {
+  box-shadow: 0 0 50px  #edd684  inset;
+  box-shadow: 0 0 20px  #726533  inset;
+}
 /* ============================
    Section: Buttons
    Description: this is the styling for the buttons. there are 3 sizes each with different font sizes and rounded corners
@@ -235,6 +264,7 @@ body#home
     height: 100vh;
     /* Ensures it fills the entire screen */
     box-sizing: border-box;
+    
 
 }
 
