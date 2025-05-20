@@ -9,19 +9,19 @@ fetch('http://127.0.0.1:8000/scenario')
     });
 */
 
+
 function output() {
+    
     fetch('http://127.0.0.1:8000/scenarioDetails')
         .then(function (response) {
             return response.text();
         }).then(function (text) {
             console.log(text); 
             alert(text);
+            x = text.scenarioDescription;
+            document.getElementById("demo").innerHTML = x;
         });
 }
-
- function myFunction() {
-            alert('Hello, this is an inline function!');
-        }
 
 
 
