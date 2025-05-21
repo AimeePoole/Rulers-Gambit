@@ -38,6 +38,15 @@ connect.execute(
 )
 
 connect.execute(
+    'CREATE TABLE IF NOT EXISTS options (\
+       id text PRIMARY KEY,\
+        optionDescription text NOT NULL, \
+        scenario_id INTEGER, \
+       FOREIGN KEY (scenario_id) REFERENCES scenario(id)\
+    )'
+)
+
+connect.execute(
     'CREATE TABLE IF NOT EXISTS affects (\
         stat_id TEXT,\
         optionMechanic INT NOT NULL,\
@@ -49,11 +58,19 @@ connect.execute(
 )
 
 connect.execute(
-    'CREATE TABLE IF NOT EXISTS options (\
-       id text PRIMARY KEY,\
-        optionDescription text NOT NULL, \
-        scenario_id INTEGER, \
-       FOREIGN KEY (scenario_id) REFERENCES scenario(id)\
+    'CREATE TABLE IF NOT EXISTS player (\
+       id text PRIMARY KEY\
+    )'
+)
+
+connect.execute(
+    'CREATE TABLE IF NOT EXISTS playerStats (\
+        player_id INTEGER, \
+        stats_id INTEGER, \
+        statsValue INTEGER, \
+        PRIMARY KEY (player_id, stats_id), \
+        FOREIGN KEY (player_id) REFERENCES player(id), \
+        FOREIGN KEY (stats_id) REFERENCES stats(id)\
     )'
 )
 
@@ -76,6 +93,15 @@ cursor.execute('INSERT INTO scenario \
     ("s3", "The rains have been barren for servil days, people are running out of water, and drying on the streets, the crops wither in reflection, what will you do?", "c1", "p1")')
 
 
+cursor.execute('INSERT INTO stats \
+    (id, statName) VALUES \
+    ("1", "Economy"), \
+    ("2", "Military"), \
+    ("3", "Security"),\
+    ("4", "Welfare"), \
+    ("5", "Education"), \
+    ("6", "Agriculture")' )
+
 cursor.execute('INSERT INTO options \
     (id, optionDescription, scenario_id) VALUES \
     ("o11", "Divert majority water resources to crops to mitigate damage", "s1"), \
@@ -90,6 +116,8 @@ cursor.execute('INSERT INTO options \
     ("o32", "Fund a mass research project", "s3"), \
     ("o33", "Cull the few to protect the many, kill a small population to conserve resources", "s3"), \
     ("o34", "Cry", "s3")')
+
+
 cursor.execute('INSERT INTO affects \
     (stat_id, optionMechanic, option_id) VALUES \
     ("6","2","o11"), \
@@ -120,14 +148,23 @@ cursor.execute('INSERT INTO affects \
     ("3", "-2","o34")')
 
 
+connect.execute('INSERT INTO player \
+        (id) VALUES ("Pl1")'\
+)
 
-cursor.execute('INSERT INTO stats \
-    (id, statName) VALUES \
-    ("1", "Economy"), \
-    ("2", "Military"), \
-    ("3", "Security"),\
-    ("4", "Welfare"), \
-    ("5", "Education"), \
-    ("6", "Agriculture")' )
+
+
+cursor.execute('INSERT INTO playerStats \
+    (player_id, stats_id, statsValue) VALUES \
+    ("Pl1", "ps1", "0"), \
+    ("Pl1", "ps2", "0"), \
+    ("Pl1", "ps3", "0"),\
+    ("Pl1", "ps4", "0"), \
+    ("Pl1", "ps5", "0"), \
+    ("Pl1", "ps6", "0")' )
+
+
+
+        
 
 connect.commit()
