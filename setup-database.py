@@ -2,7 +2,7 @@ import sqlite3
 
 # create tables and insert some data. run it once to initialise the DB
 # connect to the database
-connect = sqlite3.connect('databaseTest.db')
+connect = sqlite3.connect('database.db')
 
 connect.execute(
     'CREATE TABLE IF NOT EXISTS catagory (\
