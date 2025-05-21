@@ -164,7 +164,6 @@ def receive_input():
     data = request.get_json()
     username = data.get('username')
     
-    # Example: Save to database or do something with it
     print("Received from user:", username)
 
     return jsonify({"message": "Received", "input": username})
@@ -176,10 +175,48 @@ def receive_input():
 def input():
     data = request.get_json()
     print(data)
+    db = sqlite3.connect('databaseTest.db' , timeout=30)
+    cursor = db.cursor()
+    
+    player_id = "Pl1" 
+    print(cursor.fetchall())
+
+    stat_name_to_id = {
+        'economy': 1,
+        'military': 2,
+        'security': 3,
+        'welfare': 4,
+        'education': 5,
+        'agriculture': 6
+    }
+
+
+
+    for stat_name, stat_value in data.items():
+        stats_id = stat_name_to_id[stat_name]
+        cursor.execute(
+            'UPDATE playerStats SET statsValue = ? WHERE player_id = ? AND stats_id = ?',
+            (stat_value, player_id, stats_id)
+    )
+
+
+    db.commit()
+    db.close()
+    print(cursor.rowcount, "rows affected")
     return jsonify(data)
 
 
 
+@app.route('/playerStatsCheck', methods=['GET'])
+def player_Stats_Check():
+    db = sqlite3.connect('databaseTest.db')
+    cursor = db.cursor()
+
+    cursor.execute('SELECT playerStats.statsValue,' \
+    'playerStats.stats_id ' \
+    'FROM playerStats')
+    data = with_labels(cursor.fetchall(), ("stat_value", "stats_id"))    
+    return jsonify(data)
 
 
 
