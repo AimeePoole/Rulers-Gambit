@@ -58,10 +58,6 @@ a {
     padding: 20px;
 }
 
-.postit {
-    margin: 10px;
-    padding: 20px;
-}
 
 
 /* =========================================
@@ -91,26 +87,6 @@ a {
 
 
 
-.backgroundPostitButton
-{
-    background-color: #edd684;
-    color: rgb(0, 0, 0);
-}
-
-.postit{
-    border-radius: 3px;
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;
-    aspect-ratio: 1 / 1;
-    transform-origin: top left; /* Pivot point */
-    transform: rotate(1deg);
-}   
-
-.vignette {
-  box-shadow: 0 0 50px  #edd684  inset;
-  box-shadow: 0 0 20px  #726533  inset;
-}
 /* ============================
    Section: Buttons
    Description: this is the styling for the buttons. there are 3 sizes each with different font sizes and rounded corners
@@ -582,6 +558,36 @@ Section: popups test
 }
 
 
+.backgroundPostitButton
+{
+    background-color: #edd684;
+    color: rgb(0, 0, 0);
+}
+
+.backgroundPostit
+{
+    background-color: #ffedae;
+    color: rgb(0, 0, 0);
+}
+
+.postit{
+    border-radius: 3px;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    transform-origin: top left; /* Pivot point */
+    transform: rotate(1deg);
+}   
+
+.vignette {
+  box-shadow: 0 0 50px  #edd684  inset;
+  box-shadow: 0 0 20px  #ab9b58  inset;
+}
 
 
+.postit {
+    margin: 10px;
+    padding: 20px;
+}
 
