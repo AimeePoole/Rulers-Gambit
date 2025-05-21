@@ -1,4 +1,4 @@
-/*active*/
+/*inactive*/
 
 /* ============================
    Section: Body and useful 
@@ -144,7 +144,7 @@ button:hover{
 
 /* ============================
    Section: Borders
-   Description: this sets the size of the border to be 100% of its container and flipped it when necessary 
+   Description: this flips the border it when necessary 
    (so there can be a border on the top and bottom thatare mirrored)
    ============================ */
 .flip-vertically {
@@ -157,8 +157,6 @@ button:hover{
 /* ============================
 Section: Home_Page   
 ============================ */
-
-
 /*!important wouldn't work for over writting so I resorted to inline styling*/
 body#home
 {
@@ -343,11 +341,7 @@ im touching stuff
 }
 
 
-.block {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+
 
 .block {
     display: grid;
@@ -357,13 +351,6 @@ im touching stuff
     margin-right: 10px;
     gap: 10px;
 }
-
-.stats-form-item[type="number"] {
-    width: 60px;
-    min-width: 60px;
-    text-align: right;
-}
-
 
 .statsP-container {
     display: flex;
@@ -525,7 +512,7 @@ im touching stuff
 
 
 /* ============================
-Section: popups test   
+Section: Pop ups/ Post its   
 ============================ */
 
 /*https://www.geeksforgeeks.org/how-to-create-popup-box-using-html-and-css/*/
