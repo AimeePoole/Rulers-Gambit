@@ -207,15 +207,18 @@ def input():
 
 
 
-@app.route('/playerStatsCheck', methods=['GET'])
+@app.route('/playerStats', methods=['GET'])
 def player_Stats_Check():
     db = sqlite3.connect('databaseTest.db')
     cursor = db.cursor()
 
-    cursor.execute('SELECT playerStats.statsValue,' \
-    'playerStats.stats_id ' \
-    'FROM playerStats')
-    data = with_labels(cursor.fetchall(), ("stat_value", "stats_id"))    
+    cursor.execute(
+    'SELECT playerStats.statsValue, '
+    'stats.statName '
+    'FROM playerStats '
+    'LEFT JOIN stats ON stats.id = playerStats.stats_id'
+)
+    data = with_labels(cursor.fetchall(), ("statsValue", "statName"))
     return jsonify(data)
 
 
