@@ -32,7 +32,7 @@ connect.execute(
 
 connect.execute(
     'CREATE TABLE IF NOT EXISTS stats (\
-        id text PRIMARY KEY,\
+        id INTEGER PRIMARY KEY,\
         statName text NOT NULL\
     )'
 )
@@ -65,7 +65,7 @@ connect.execute(
 
 connect.execute(
     'CREATE TABLE IF NOT EXISTS playerStats (\
-        player_id INTEGER, \
+        player_id text, \
         stats_id INTEGER, \
         statsValue INTEGER, \
         PRIMARY KEY (player_id, stats_id), \
@@ -156,12 +156,12 @@ connect.execute('INSERT INTO player \
 
 cursor.execute('INSERT INTO playerStats \
     (player_id, stats_id, statsValue) VALUES \
-    ("Pl1", "ps1", "0"), \
-    ("Pl1", "ps2", "0"), \
-    ("Pl1", "ps3", "0"),\
-    ("Pl1", "ps4", "0"), \
-    ("Pl1", "ps5", "0"), \
-    ("Pl1", "ps6", "0")' )
+    ("Pl1", 1, 0), \
+    ("Pl1", 2, 0), \
+    ("Pl1", 3, 0),\
+    ("Pl1", 4, 0), \
+    ("Pl1", 5, 0), \
+    ("Pl1", 6, 0)' )
 
 
 
