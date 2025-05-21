@@ -12,15 +12,6 @@ function checkSum() {
       if (total === 20) {
         alert("Success! The total is exactly 20.");
 
-        //this gets the entered user name and posts it to the python terminal
-        const Economy = document.getElementById('economy').value;
-        const Military = document.getElementById('military').value;
-        const Security = document.getElementById('security').value;
-        const Welfare = document.getElementById('welfare').value;
-        const Education = document.getElementById('education').value;
-        const Agriculture = document.getElementById('agriculture').value;
-    
-        
         fetch("http://127.0.0.1:8000/stats", {
         method: "POST",
         headers: {
