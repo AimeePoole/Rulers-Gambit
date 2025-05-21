@@ -99,10 +99,6 @@ a {
     width: 200px;
 }
 
-button:hover{
-    background-color: #4d5ea0 !important;
-}
-
 .buttonLarge {
 
     font-size: 24px;
@@ -114,15 +110,6 @@ button:hover{
     width: 250px;
 }
 
-.backgroundButtonLargeGradient{
-     background-image: linear-gradient(to bottom right, #444484, #5E6FB4);
-     color: #ffffff;
-    }
-.backgroundButtonLargeGradient:hover {
-    background-image: linear-gradient(to bottom right, #5E6FB4, #444484); /* reversed gradient */
-    color: #ffffff;
-}
-
 .buttonSmall {
     font-size: 16px;
     cursor: url('Media/hand-cursor.png'), auto;
@@ -132,6 +119,22 @@ button:hover{
     margin: 5px;
     width: 140px;
 }
+
+button:hover{
+    background-color: #4d5ea0 !important;
+}
+
+
+.backgroundButtonLargeGradient{
+     background-image: linear-gradient(to bottom right, #444484, #5E6FB4);
+     color: #ffffff;
+    }
+.backgroundButtonLargeGradient:hover {
+    background-image: linear-gradient(to bottom right, #5E6FB4, #444484); /* reversed gradient */
+    color: #ffffff;
+}
+
+
 
 /*floats the buttons right when needed*/
 .float-right {
