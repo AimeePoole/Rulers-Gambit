@@ -86,25 +86,6 @@ def find():
 
 
 
-
-
-
-
-
-
-
-@app.route('/post', methods=['POST'])
-def receive_input():
-    data = request.get_json()
-    username = data.get('username')
-    
-    print("Received from user:", username)
-
-    return jsonify({"message": "Received", "input": username})
-
-
-
-
 @app.route('/stats', methods=['POST'])
 def input():
     data = request.get_json()
