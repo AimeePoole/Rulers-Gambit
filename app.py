@@ -1,69 +1,161 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS, cross_origin
 import sqlite3
+import random
+
+app = Flask(__name__)
+
+CORS(app)
+
 
 # given an array of rows, each of which is an array, add the given labels to each row
 def with_labels(rows, labels):
     return [dict((labels[i], value) for i, value in enumerate(row)) for row in rows]
 
 
-app = Flask(__name__)
 
-# lets you test the app is ronnung
-@app.route('/', methods=['GET', 'POST'])
-def hello_world():
-    return "Hello, world!", 200
 
-# retrieve all books
-@app.route('/books', methods=['GET'])
-def find_all():
+
+#this groups the options and scenarios and just shows that
+@app.route('/scenarioDetails', methods=['GET'])
+def find():
     db = sqlite3.connect('database.db')
-    #a cursor lets you Send SQL queries to the database (e.g., SELECT, INSERT, UPDATE, DELETE) and fetch results from those queries
     cursor = db.cursor()
 
-    # get all books
-    cursor.execute('SELECT books.id, title, authors.name FROM books JOIN authors ON books.author = authors.id')
-    data = with_labels(cursor.fetchall(), ("id", "title", "author"))
+    cursor.execute('''
+        SELECT 
+            scenario.id AS scenario_id,
+            scenario.scenarioDescription,
+            options.id,
+            options.optionDescription,
+            affects.optionMechanic,
+            affects.stat_id
+            FROM scenario
+            LEFT JOIN options ON options.scenario_id = scenario.id
+            LEFT JOIN affects ON affects.option_id = options.id
 
-    # for each book, get genres as an array, number of ratings and average stars
-    for book in data:
-        # genres
-        cursor.execute('SELECT name FROM genres JOIN book_genres ON genres.id = book_genres.genre WHERE book = ?', (str(book["id"])))
-        book["genres"] = [ g[0] for g in cursor.fetchall() ]
+    ''')
 
-        # ratings
-        cursor.execute('SELECT COUNT(id), AVG(stars) FROM ratings WHERE book = ?', (str(book["id"])))
-        ratings = cursor.fetchone()
-        book["number_of_ratings"] = ratings[0]
-        book["average_rating"] = ratings[1]
+    rows = cursor.fetchall()
 
+    # Group the options by scenario so the scenario isnt printed every time
+    scenarios = {}
+    for scenario_id, scenario_desc, option_id, option_desc, optionMechanic, stat_id in rows:
+        if scenario_id not in scenarios:
+            #https://pythonguides.com/dictionaries/
+            #https://docs.python.org/3/tutorial/datastructures.html#dictionaries
+            #https://www.geeksforgeeks.org/add-a-keyvalue-pair-to-dictionary-in-python/  - Using square brackets []
+            #https://jsonapi.org/format/#document-resource-objects
+            scenarios[scenario_id] = {
+                "id": scenario_id,
+                "scenarioDescription": scenario_desc,
+                "options": []
+            }
+        
+        if option_desc:
+            # Check if the option already exists
+            #Retrieves the next item generator = (expression for item in iterable if condition) 
+            #https://www.pythonmorsels.com/next
+            generator = next((option for option in scenarios[scenario_id]["options"] if option["option_id"] == option_id), None)
+            if not generator:
+                # Add new option if it doesn't exist
+                scenarios[scenario_id]["options"].append({
+                    "option_id": option_id,
+                    "optionDescription": option_desc,
+                    "optionMechanic": []
+                })
+        #Checks whether for an optionMechanic
+        if optionMechanic:
+            # Find the specific option that the current mechanic affects by finding the one with the same option id
+            for option in scenarios[scenario_id]["options"]:
+                #chooses the correct id to add the mechanic to
+                if option["option_id"] == option_id:
+                    #appends the dictionary to have the mechanic
+                    option["optionMechanic"].append({
+                        "stat_id": stat_id,
+                        "optionDescription": optionMechanic
+                    })
+                    break
+
+        
+    #https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary
+    #https://bobbyhadz.com/blog/python-get-random-key-value-from-dictionary
+    random_scenario = random.choice(list(scenarios.values()))
+    return jsonify(random_scenario)
+
+
+
+
+
+
+
+
+
+
+
+@app.route('/post', methods=['POST'])
+def receive_input():
+    data = request.get_json()
+    username = data.get('username')
+    
+    print("Received from user:", username)
+
+    return jsonify({"message": "Received", "input": username})
+
+
+
+
+@app.route('/stats', methods=['POST'])
+def input():
+    data = request.get_json()
+    print(data)
+    db = sqlite3.connect('database.db' , timeout=30)
+    cursor = db.cursor()
+    
+    player_id = "Pl1" 
+    print(cursor.fetchall())
+
+    stat_name_to_id = {
+        'economy': 1,
+        'military': 2,
+        'security': 3,
+        'welfare': 4,
+        'education': 5,
+        'agriculture': 6
+    }
+
+
+
+    for stat_name, stat_value in data.items():
+        stats_id = stat_name_to_id[stat_name]
+        cursor.execute(
+            'UPDATE playerStats SET statsValue = ? WHERE player_id = ? AND stats_id = ?',
+            (stat_value, player_id, stats_id)
+    )
+
+
+    db.commit()
+    db.close()
+    print(cursor.rowcount, "rows affected")
     return jsonify(data)
 
-# rate a book by id
-@app.route('/books/<int:book_id>/ratings', methods=['POST'])
-def rate(book_id):
+
+
+@app.route('/playerStats', methods=['GET'])
+def player_Stats_Check():
     db = sqlite3.connect('database.db')
     cursor = db.cursor()
 
-    # first verify that the book exists
-    cursor.execute('SELECT 1 FROM books WHERE id = ?', (str(book_id)))
-    if not cursor.fetchone():
-        return jsonify({ "error": "Book does not exist." }), 404
+    cursor.execute(
+    'SELECT playerStats.statsValue, '
+    'stats.statName '
+    'FROM playerStats '
+    'LEFT JOIN stats ON stats.id = playerStats.stats_id'
+)
+    data = with_labels(cursor.fetchall(), ("statsValue", "statName"))
+    return jsonify(data)
 
-    # get star rating out of post data
-    data = request.json
-    try:
-        stars = data["stars"]
 
-        if stars < 0 or stars > 5:
-            return jsonify({ "error": "\"stars\" may range between 0 and 5." }), 400
-    except KeyError:
-        return jsonify({ "error": "POST data must include a key \"stars\"" }), 400
-    except ValueError:
-        return jsonify({ "error": "\"stars\" must be an integer." }), 400
-
-    cursor.execute('INSERT INTO ratings (book, stars) VALUES (?, ?)', (str(book_id), str(stars)))
-    db.commit()
-    return jsonify({ "stars": stars }), 201
 
 if __name__ == '__main__':
     app.run(host="127.0.0.1", port=8000, debug=True)
