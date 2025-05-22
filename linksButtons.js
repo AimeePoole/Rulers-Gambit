@@ -38,5 +38,9 @@ function underConstructionPageLink() {
     alert("The page you are trying to reach is under comstruction");
 }
 
+function loserpagehomelink() {
+    window.location.href = "Home_Page.html";
+}
+
 
 
