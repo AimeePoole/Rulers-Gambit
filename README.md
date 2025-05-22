@@ -30,3 +30,7 @@ Links to the pages that connect to the database
 
 * **[scenario page](senario_page.html)**: where users anser senarions
 * **[scenario javascript](scenario.js)**: where scenarios and options text are fetched using a get method and where entered option used the option affects to change the users stats
+
+
+## Sources Used
+
