@@ -591,11 +591,8 @@ Section: Pop ups/ Post its
 }
 
 #loserpagehomelink {
-    width: 10%;
     background-color: #ead8c1;
-    padding: 5%;
-    margin: 5%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 
-
+    display: flex;
+    justify-content: baseline;
+    box-shadow: 0 0 5px;
 }
