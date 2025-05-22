@@ -569,4 +569,8 @@ Section: Pop ups/ Post its
 /* ============================
    Section: loser_page
    ============================ */
-   
+
+#loser_body{
+    background-color: #ffedae;
+    
+}
