@@ -1,5 +1,6 @@
 //used instead of links in html so that they can look like buttons 
 //i still need to add these to the pages
+
 function animationPageLink() {
     window.location.href = "animation_page.html";
 }
