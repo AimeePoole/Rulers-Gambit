@@ -125,7 +125,7 @@ button:hover {
     background-color: #4d5ea0 !important;
 }
 
-.buttonLarge:hover {
+.ButtonLarge:hover {
     background-image: linear-gradient(to bottom right, #5E6FB4, #444484);
     /* reversed gradient */
     color: #ffffff;
@@ -596,5 +596,6 @@ Section: Pop ups/ Post its
     padding: 5%;
     margin: 5%;
     border-radius: 10px;
+    box-shadow: 0 0 10px 
 
 }
