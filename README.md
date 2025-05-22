@@ -26,7 +26,6 @@ Links to the pages that connect to the database
 * **[stats javascript](stats.js)**: where entered stats are turned into a json file and fetched using a post method to the python
 
 
-
 **The Scenario Page**
 
 * **[scenario page](senario_page.html)**: where users anser senarions
