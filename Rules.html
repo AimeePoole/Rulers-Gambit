@@ -7,6 +7,7 @@ This contains the meta information, the title and the link to the css style shee
 -->
 
 <!--this is the rules page witch will includes the rules of the game as well as an example senario-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,48 +17,46 @@ This contains the meta information, the title and the link to the css style shee
     <link href="styles.css" rel="stylesheet">
 </head>
 
-<body>
-
-    <header >    
-        <h1>Rules</h1>
-        <section class="links">
-        </section>
-    </header>
-
+<body class = "centre-text">
+    <h1>Rules</h1>
     <!--there is an increased amount of section in this code due to complex css systling with flexbox-->
-    <main>
-        <section class = "borderBox backgroundLightBlue">
-            <section class = "lore-container">
-            <section id = "introducton" class = "box backgroundLightCream centre-text lore-item">
-                <img class ="width100 flip-vertically" src="Media\borderLong.png" alt="border image">
-            <h2>Welcome to WAR!</h2>
-            <p>You’re the new ruler of Pydrain. You’re right in the middle of two factions that are waging war to end all wars. Will you and your allies make it out alive?</p>
-            <p>Get to the end of the game without any stats reaching zero. You have 6 stats: Economy, Military, Security, Welfare, Agriculture. If any of these hits zero you lose. 
-                Get to the end with the most points possible and you’ll be at the top of the leaderboard.</p>
-            <p>Pick what points out of your 20 to put into each stat. You will need to put at least 1 in every stat to survive.</p>
-            <p>These are 3 phases with 5 randomised scenarios, these scenarios will affect your Stats. Allocate your points wisely as each will affect your stats in different ways.
-                 Some solutions require certain stats to choose, so invest your points wisely.</p>
-                 <section id="Rules-example">   
-            <h2>Here is an example of what you could face</h2>
-            <p>-Your troops navigate difficult turain, in the process, 
-                vehiculs are damages are supplies are lost. What will you do.- </p>
-                <h3 class="Rules-Example-option">A</h3>
-                <p class="Rules-Senario-Options">Work with navigation to find a diffient rout.</p>
-                <p class="Rules-Senario-Options">-1 security, +1 military</p>
-                <h3 class="Rules-Example-option">B</h3>
-                <p class="Rules-Senario-Options">Carry on, it is imperative that that troops reach their destination on time. </p>
-                <p class="Rules-Senario-Options">+2 military, -1 security</p>
-                <h3 class="Rules-Example-option">C</h3>
-                <p class="Rules-Senario-Options">Send the troops back to home base to re-group and re-supplie</p>
-                <p class="Rules-Senario-Options">-1 military, +2 secuirty</p>
-                <h3 class="Rules-Example-option">D</h3>
-                <p class="Rules-Senario-Options">Fix the vehicules on site, 
-                    send more supplies behilds the main group and continue on this path. </p>
+        <section class="borderBox backgroundLightBlue">
+            <section id="introducton" class="box backgroundLightCream centre-text">
+                <img class="width100 flip-vertically" src="Media\borderLong.png" alt="border image">
+                <h2>Welcome to WAR!</h2>
+                <p>You’re the new ruler of Pydrain. You’re right in the middle of two factions that are waging war
+                    to end all wars. Will you and your allies make it out alive?</p>
+                <p>Get to the end of the game without any stats reaching zero. You have 6 stats: Economy, Military,
+                    Security, Welfare, Agriculture. If any of these hits zero you lose.
+                    Get to the end with the most points possible and you’ll be at the top of the leaderboard.</p>
+                <p>Pick what points out of your 20 to put into each stat. You will need to put at least 1 in every
+                    stat to survive.</p>
+                <p>These are 3 phases with 5 randomised scenarios, these scenarios will affect your Stats. Allocate
+                    your points wisely as each will affect your stats in different ways.
+                    Some solutions require certain stats to choose, so invest your points wisely.</p>
+                <section id="Rules-example">
+                    <h2>Here is an example of what you could face</h2>
+                    <p>-Your troops navigate difficult turain, in the process,
+                        vehiculs are damages are supplies are lost. What will you do.- </p>
+                    <h3 class="Rules-Example-option">A</h3>
+                    <p class="Rules-Senario-Options">Work with navigation to find a diffient rout.</p>
+                    <p class="Rules-Senario-Options">-1 security, +1 military</p>
+                    <h3 class="Rules-Example-option">B</h3>
+                    <p class="Rules-Senario-Options">Carry on, it is imperative that that troops reach their
+                        destination on time. </p>
+                    <p class="Rules-Senario-Options">+2 military, -1 security</p>
+                    <h3 class="Rules-Example-option">C</h3>
+                    <p class="Rules-Senario-Options">Send the troops back to home base to re-group and re-supplie
+                    </p>
+                    <p class="Rules-Senario-Options">-1 military, +2 secuirty</p>
+                    <h3 class="Rules-Example-option">D</h3>
+                    <p class="Rules-Senario-Options">Fix the vehicules on site,
+                        send more supplies behilds the main group and continue on this path. </p>
                     <p class="Rules-Senario-Options">-1 secuiryt, +1 military, +1 ppp</p>
                 </section>
 
                 <h2>The results</h2>
-                <button id="openPopupButton" class = "buttonSmall backgroundDarkBlue centre-text">Enter</button>
+                <button id="openPopupButton" class="buttonSmall backgroundDarkBlue centre-text">Enter</button>
                 <section id="popup" class="popup">
                     <section class="postit backgroundPostit vignette">
                         <section>
@@ -66,19 +65,16 @@ This contains the meta information, the title and the link to the css style shee
                             <p>b. -1 security, +2 military</p>
                             <p>c. -1 military, +2 security</p>
                             <p>d. -1 security, +1 military, +1 ppp</p>
-            
-                            <button id="closePopupButton" class ="buttonSmall backgroundPostitButton centre-text">Close</button>
+
+                            <button id="closePopupButton"
+                                class="buttonSmall backgroundPostitButton centre-text">Close</button>
                         </section>
                     </section>
                 </section>
-                <script src="pop-up-script.js"></script>
-
-
+            </section>
         </section>
-    </section>
-</section>
-    <a href="Home_Page.html"><button class="button backgroundDarkBlue centre-text">Home</button></a>
+        <button onclick="homePageLink()" class="button backgroundDarkBlue centre-text">Home</button>
 
-    </main>
-
+    <script src="pop-up-script.js"></script>
+    <script src="linksButtons.js"></script>
 </body>
