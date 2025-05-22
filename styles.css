@@ -125,7 +125,7 @@ button:hover {
     background-color: #4d5ea0 !important;
 }
 
-.backgroundButtonLargeGradient:hover {
+.buttonLarge:hover {
     background-image: linear-gradient(to bottom right, #5E6FB4, #444484);
     /* reversed gradient */
     color: #ffffff;

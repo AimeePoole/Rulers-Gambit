@@ -22,15 +22,15 @@ This contains the meta information, the title and the link to the css style shee
             <img class = "home-main-item title-image" src="Media\RulersGambitTitle.png" alt = "Ruler's Gambit title">
 
         <section class = "home-main-item button-container-big margin-box">
-                <a href="animation_page.html"><button class="button-item buttonLarge centre-text">Play</button></a>
-                <a href="Rules.html"><button class="button-item buttonLarge centre-text">Rules</button></a>
+                <button onclick="animationPageLink()" class="buttonLarge centre-text">Play</button>
+                <button onclick="rulesPageLink()" class="buttonLarge centre-text">Rules</button>
         </section>
         
 
         <section class = "home-sub-container home-main-item">
             <section class = "home-sub-item margin-box button-container-small">
-                <a href="leaderboard_page.html"><button class="button-item button backgroundDarkBlue centre-text">Leaderboard</button></a>
-                <a href="Settings_Page.html"><button class="button-item button backgroundDarkBlue centre-text white">Settings</button></a>   
+                <button onclick="underConstructionPageLink()" class="button backgroundDarkBlue centre-text">Leaderboard</button>
+                <button onclick="underConstructionPageLink()" class="button backgroundDarkBlue centre-text">Settings</button>
             </section>
 
             <section class = "home-sub-item margin-box">
@@ -43,4 +43,5 @@ This contains the meta information, the title and the link to the css style shee
         <source src="Media\epic-drums-216819.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
+    <script src="linksButtons.js"></script>
 </body>
