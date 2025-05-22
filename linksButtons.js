@@ -1,4 +1,4 @@
-//used indtead of links in html so that they can look like buttons 
+//used instead of links in html so that they can look like buttons 
 //i still need to add these to the pages
 function animationPageLink() {
     window.location.href = "animation_page.html";
@@ -32,6 +32,7 @@ function statsPageLink() {
     window.location.href = "stats_page.html";
 }
 
+//used for pages that don't exist
 function underConstructionPageLink() {
     alert("The page you are trying to reach is under comstruction");
 }
