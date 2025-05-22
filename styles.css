@@ -57,7 +57,7 @@ a {
 
 
 /* =========================================
-   Section: Navigation Background colours
+   Section: Background colours
    Description: These all change the background colour of elements they also change the 
    text colour to black or white depending on the background colour.
    ========================================= */
@@ -86,6 +86,7 @@ a {
 /* ============================
    Section: Buttons
    Description: this is the styling for the buttons. there are 3 sizes each with different font sizes and rounded corners
+   It also has the colour change when hovered and the large buttons have gradients.
    ============================ */
 
 .button {
@@ -108,6 +109,8 @@ a {
     padding: 15px;
     margin: 10px;
     width: 250px;
+    background-image: linear-gradient(to bottom right, #444484, #5E6FB4);
+    color: #ffffff;
 }
 
 .buttonSmall {
@@ -124,11 +127,6 @@ button:hover{
     background-color: #4d5ea0 !important;
 }
 
-
-.backgroundButtonLargeGradient{
-     background-image: linear-gradient(to bottom right, #444484, #5E6FB4);
-     color: #ffffff;
-    }
 .backgroundButtonLargeGradient:hover {
     background-image: linear-gradient(to bottom right, #5E6FB4, #444484); /* reversed gradient */
     color: #ffffff;
