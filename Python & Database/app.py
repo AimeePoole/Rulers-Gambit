@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 
-# given an array of rows, each of which is an array, add the given labels to each row
+#adds the labels to each row
 def with_labels(rows, labels):
     return [dict((labels[i], value) for i, value in enumerate(row)) for row in rows]
 
@@ -16,9 +16,9 @@ def with_labels(rows, labels):
 
 
 
-#this groups the options and scenarios and just shows that
+#this groups the scenarios, their options and their options mechanics.It uses a get method so the json can be fetched by the javascript
 @app.route('/scenarioDetails', methods=['GET'])
-def find():
+def output_scenario_details():
     db = sqlite3.connect('database.db')
     cursor = db.cursor()
 
@@ -85,9 +85,9 @@ def find():
 
 
 
-
+#this uses a post method to update the stats to what the user entered
 @app.route('/stats', methods=['POST'])
-def input():
+def input_stats():
     data = request.get_json()
     print(data)
     db = sqlite3.connect('database.db' , timeout=30)
@@ -121,9 +121,9 @@ def input():
     return jsonify(data)
 
 
-
+#this groups the players stats and uses a get method so it can be fetched by the javascript
 @app.route('/playerStats', methods=['GET'])
-def player_Stats_Check():
+def output_player_stats():
     db = sqlite3.connect('database.db')
     cursor = db.cursor()
 
