@@ -1,3 +1,4 @@
+#inactive
 import sqlite3
 
 # create tables and insert some data. run it once to initialise the DB

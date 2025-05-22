@@ -1,3 +1,4 @@
+//inactive
 //get elements by id once and save them as consts
 const openPopup = document.getElementById('openPopupButton');
 const closePopup = document.getElementById('closePopupButton');

@@ -1,3 +1,4 @@
+//inactive
 //this gets the stats from html and will post them to the python
 function checkSum() {
   //this gets all the stat values entered as consts 
