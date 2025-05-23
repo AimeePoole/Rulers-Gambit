@@ -9,6 +9,7 @@ This contains the meta information, the title and the link to the css style shee
 <!-- this is the main page so to speach, that the user will spend the majority of their time on
 there is also a large amount of id and sections to account for the flextbox and css styleing  
 -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,72 +26,73 @@ there is also a large amount of id and sections to account for the flextbox and 
         <a href="loser_page.html">loser</a>
     </section>
 
-    
+
     <!-- <a href="Home_Page.html"><button class="button backgroundDarkBlue centre-text">Go Home</button></a>
     <a href="score_page.html"><button class="buttonSmall backgroundDarkBlue centre-text">Score</button></a> -->
-    <section  id="Senario-body">
+    <section id="Senario-body">
 
         <section class="left-side">
 
-    <img id="title" src="Media/prydain.png" alt="Prydain title">
-    <img id="border-under-title" src="Media/border.png">
+            <img id="title" src="Media/prydain.png" alt="Prydain title">
+            <img id="border-under-title" src="Media/border.png">
 
-    <section id="stats-box">
-        <img id="stats_title" src="Media/stats.png" alt="Stats_title">
-        <!--put stats info here !!-->
-        <p id = "getStats"></p>
-        
-    </section>
+            <section id="stats-box">
+                <img id="stats_title" src="Media/stats.png" alt="Stats_title">
+                <!--put stats info here !!-->
+                <p id="getStats"></p>
 
-    <section id="map">
-        <img id ="main-page-map" src="Media\mapWithBorder.png" alt="A map of eight countries split into 3 islands.">
-    </section>
+            </section>
 
-</section>
+            <section id="map">
+                <img id="main-page-map" src="Media\mapWithBorder.png"
+                    alt="A map of eight countries split into 3 islands.">
+            </section>
 
-
-<section class="right-side">
-
-    <section id="senario-box">
-        <!--put scenario description here !!-->
-
-        <img class ="width100y flip-vertically" id="main-page-border" src="Media\border.png">
-        <p id = "getScenario"></p>
+        </section>
 
 
-        <section id="inner-senario-box-perent">
+        <section class="right-side">
 
-        <section id="inner-senario-box">
-        
-            <img id="inner-page-border" src="Media/border.png">
-            <!--put radio buttons and scenario options here !!-->
+            <section id="senario-box">
+                <!--put scenario description here !!-->
 
-            <form>
-    <input type="radio" id="Option_1" name="Options" value="Option #1">
-    <label for="O1" id="getOption1"></label><br>
-
-    <input type="radio" id="Option_2" name="Options" value="Option #2">
-    <label for="O2" id="getOption2"></label><br>
-
-    <input type="radio" id="Option_3" name="Options" value="Option #3">
-    <label for="O3" id="getOption3"></label><br>
-
-    <input type="radio" id="Option_4" name="Options" value="Option #4">
-    <label for="O4" id="getOption4"></label>
+                <img class="width100y flip-vertically" id="main-page-border" src="Media\border.png">
+                <p id="getScenario"></p>
 
 
-        <input type="submit" value="Submit">
+                <section id="inner-senario-box-perent">
 
-        <script src="scenario.js"></script>
-            </form>
-    
+                    <section id="inner-senario-box">
+
+                        <img id="inner-page-border" src="Media/border.png">
+                        <!--put radio buttons and scenario options here !!-->
+
+                        <form>
+                            <input type="radio" id="Option_1" name="Options" value="Option #1">
+                            <label for="O1" id="getOption1"></label><br>
+
+                            <input type="radio" id="Option_2" name="Options" value="Option #2">
+                            <label for="O2" id="getOption2"></label><br>
+
+                            <input type="radio" id="Option_3" name="Options" value="Option #3">
+                            <label for="O3" id="getOption3"></label><br>
+
+                            <input type="radio" id="Option_4" name="Options" value="Option #4">
+                            <label for="O4" id="getOption4"></label>
+
+
+                            <input type="submit" value="Submit">
+
+                            <script src="scenario.js"></script>
+                        </form>
+                        <p id = "result"></p>
+                    </section>
+                </section>
+
+            </section>
+
         </section>
     </section>
-
-    </section>
-
-</section>
-</section>
 
 
 </body>
