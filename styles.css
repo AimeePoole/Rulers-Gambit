@@ -593,6 +593,6 @@ Section: Pop ups/ Post its
 #loserpagehomelink {
     background-color: #ead8c1;
     display: flex;
-    justify-content: baseline;
+    justify-content: center;
     box-shadow: 0 0 5px;
 }
