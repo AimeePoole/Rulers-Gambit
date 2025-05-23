@@ -75,7 +75,7 @@ def output_scenario_details():
                     #appends the dictionary to have the mechanic
                     option["optionMechanic"].append({
                         "stat_id": stat_id,
-                        "optionDescription": optionMechanic
+                        "option_Mechanic": optionMechanic
                     })
                     break
 
@@ -121,6 +121,58 @@ def input_stats():
     db.close()
     print(cursor.rowcount, "rows affected")
     return jsonify(data)
+
+
+
+
+@app.route('/statsChange', methods=['POST'])
+def input_statChange():
+    
+    data = request.get_json()
+    print("Received data:", data)  # Debug print
+
+
+    data = request.get_json()
+    print(data)
+    db = sqlite3.connect('database.db' , timeout=30)
+    cursor = db.cursor()
+    
+    player_id = "Pl1" 
+    print(cursor.fetchall())
+
+    cursor.execute(
+                '''
+                UPDATE playerStats
+                SET statsValue = statsValue + ?
+                WHERE player_id = ? AND stats_id = ?
+                ''',
+                (data['option_Mechanic'], player_id, data['stat_id'])
+    )
+
+
+    db.commit()
+    db.close()
+    print(cursor.rowcount, "rows affected")
+    return jsonify(data)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #this groups the players stats and uses a get method so it can be fetched by the javascript
