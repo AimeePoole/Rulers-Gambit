@@ -8,7 +8,7 @@ fetch('http://127.0.0.1:8000/scenarioDetails')
     console.log(data);
     //gets the correct html element
     document.getElementById("getScenario").innerHTML = data.scenarioDescription;
-    
+
     document.getElementById("getOption1").innerHTML = data.options[0].optionDescription;
     document.getElementById("getOption2").innerHTML = data.options[1].optionDescription;
     document.getElementById("getOption3").innerHTML = data.options[2].optionDescription;
@@ -38,3 +38,10 @@ fetch('http://127.0.0.1:8000/playerStats')
     // gets the correct html element
     document.getElementById("getStats").innerHTML = statsStyled;
   });
+
+
+
+function displayRadioValue() {
+  const selected = document.querySelector('input[name="Options"]:checked').value;
+  document.getElementById("result").innerHTML = selected;
+}
