@@ -492,6 +492,7 @@ im touching stuff
     display: flex;
     justify-content: space-between;
     justify-content: center;
+    flex-direction: column;
 
 }
 
@@ -515,7 +516,16 @@ im touching stuff
 #row_within_column {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    align-content: center;
+    background-color: plum;
+}
+
+#Buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background-color: pink;
+
 }
 
 /* #inner-senario-box-perent {
