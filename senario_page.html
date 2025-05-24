@@ -35,7 +35,7 @@ there is also a large amount of id and sections to account for the flextbox and 
 
             <img id="title" src="Media/prydain.png" alt="Prydain title">
             <img id="border-under-title" src="Media/border.png">
-            
+
             <section id="stats-box">
                 <img id="stats_title" src="Media/stats.png" alt="Stats_title">
                 <!--put stats info here !!-->
@@ -44,15 +44,15 @@ there is also a large amount of id and sections to account for the flextbox and 
             </section>
 
             <section id="row_within_column">
-            <section id="map">
-                <img id="main-page-map" src="Media/map_without_boarder.png"
-                    alt="A map of eight countries split into 3 islands.">
+                <section id="map">
+                    <img id="main-page-map" src="Media/map_without_boarder.png"
+                        alt="A map of eight countries split into 3 islands.">
+                </section>
+                <section id="russian_nesting_doll">
+                    <h3 id="Scenario_counter">1</h3>
+                    <img id="pillar" src="Media/pillar.png" alt="Pillar">
+                </section>
             </section>
-            <section id="russian_nesting_doll">
-                <h3 id="Scenario_counter">1</h3>
-                <img id="pillar" src="Media/pillar.png" alt="Pillar">
-            </section>
-        </section>
 
         </section>
 
@@ -86,7 +86,7 @@ there is also a large amount of id and sections to account for the flextbox and 
                             <input type="radio" id="Option_4" name="Options" value="3">
                             <label for="O4" id="getOption4"></label>
 
-                            
+
                         </form>
                     </section>
                 </section>
@@ -94,32 +94,42 @@ there is also a large amount of id and sections to account for the flextbox and 
                 <!--Note The button can be inside the form or errors-->
 
                 <section id="Buttons">
-                <button  class="buttonSmall backgroundLightBlue centre-text" onclick="getOptionPickedId()">submit</button>
-                <p id = "result"></p>
+                    <button id="openPopupButton" class="buttonSmall backgroundLightBlue centre-text"
+                        onclick="getOptionPickedId()">submit</button>
+                    <section id="popup" class="popup">
+                        <section class="postit backgroundPostit vignette">
 
+                            <section>
+                                <h2>tx</h2>
 
-                <button id="openPopupButton" class="buttonSmall backgroundDarkBlue centre-text">Game Theory</button>
-                <section id="popup" class="popup">
-                    <section class="postit backgroundPostit vignette">
-
-                        <section>
-                            <h2>Game Theory Info - add later</h2>
-
-                            <button id="closePopupButton"
-                                class="buttonSmall backgroundPostitButton centre-text">Close</button>
+                                <button id="closePopupButton"
+                                    class="buttonSmall backgroundPostitButton centre-text">Close</button>
+                            </section>
                         </section>
                     </section>
+
+                        <p id="result"></p>
+
+
+                        <button id="openPopupButton" class="buttonSmall backgroundDarkBlue centre-text">Game
+                            Theory</button>
+                        <section id="popup" class="popup">
+                            <section class="postit backgroundPostit vignette">
+
+                                <section>
+                                    <h2>Game Theory Info - add later</h2>
+
+                                    <button id="closePopupButton"
+                                        class="buttonSmall backgroundPostitButton centre-text">Close</button>
+                                </section>
+                            </section>
+                        </section>
+
+                    </section>
+
                 </section>
-
             </section>
-            </section>
+            <script src="scenario.js"></script>
+            <script src="pop-up-script.js"></script>
 
-        </section>
-    </section>
-    <script src="scenario.js"></script>
-    <script src="pop-up-script.js"></script>
-        
 </body>
-
-
-
