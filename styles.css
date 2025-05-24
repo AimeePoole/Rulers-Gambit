@@ -624,3 +624,13 @@ Section: Pop ups/ Post its
     justify-content: center;
     box-shadow: 0 0 5px;
 }
+
+
+/* ============================
+   Section: end_page
+   ============================ */
+   
+.end_image
+{
+    width: 35vw;
+}
