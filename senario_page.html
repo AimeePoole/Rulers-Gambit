@@ -80,15 +80,16 @@ there is also a large amount of id and sections to account for the flextbox and 
                             <input type="radio" id="Option_4" name="Options" value="3">
                             <label for="O4" id="getOption4"></label>
 
-
-                            <input type="submit" value="Submit">
-
+                            
                         </form>
-                        <p id = "result"></p>
-                        <button onclick="getOptionPickedId()">click</button>
                     </section>
                 </section>
-                
+
+                <!--Note The button can be inside the form or errors-->
+                <button  class="buttonSmall backgroundLightBlue centre-text" onclick="getOptionPickedId()">submit</button>
+                <p id = "result"></p>
+
+
                 <button id="openPopupButton" class="buttonSmall backgroundDarkBlue centre-text">Game Theory</button>
                 <section id="popup" class="popup">
                     <section class="postit backgroundPostit vignette">
