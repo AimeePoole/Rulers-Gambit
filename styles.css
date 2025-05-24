@@ -1,4 +1,4 @@
-/*inactive*/
+/*active*/
 
 /* ============================
    Section: Body and useful 
@@ -542,8 +542,6 @@ Section: Pop ups/ Post its
 ============================ */
 
 /*https://www.geeksforgeeks.org/how-to-create-popup-box-using-html-and-css/*/
-
-
 
 .popup {
     display: none;
