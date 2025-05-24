@@ -1,4 +1,4 @@
-//inactive
+//active
 //fetches the python get method getting a json file with the scenario description option decription and option mechanics
 let scenarioData = null;
 
