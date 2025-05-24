@@ -1,4 +1,4 @@
-/*active*/
+/*inactive*/
 
 /* ============================
    Section: Body and useful 
@@ -148,7 +148,6 @@ button:hover {
 
 
 
-
 /* ============================
 Section: Home_Page   
 ============================ */
@@ -183,8 +182,6 @@ body#home {
     justify-content: flex-start;
     /* Align to the top of the screen */
 }
-
-
 
 .home-sub-container {
     display: flex;
