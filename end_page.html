@@ -19,24 +19,30 @@ This contains the meta information, the title and the link to the css style shee
 
     <body>
         <section class="borderBox backgroundLightBlue">
-            <section class="box backgroundLightCream">
-                <h2>You have Won with ___ points!</h2>
+            <section class="box backgroundLightCream centre-text end_container">
+                <section class=" end_item">
 
-                <form action="/index.html" method="POST">
-                    <h3>Enter Leaderboard Name:</h3>
-                    <label for="username">Username</label>
-                    <input type="text" name="username" id="username" />
-                </form>
+                    <h2>Congrats</h2>
+                    <h2>You have Won with <span id="endScore"></span> points!</h2>
 
-                <br>
-                <h1>|Score Page Under Construction|</h1>
-                <a href="Home_Page.html"><button class="button backgroundDarkBlue centre-text">Go Home</button></a>
+                    <!--
+                    <form action="/index.html" method="POST">
+                        <h3>Enter Leaderboard Name:</h3>
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" />
+                    </form>
+                    -->
+                    <br>
+                    <img class="end_image" src="Media\OxAndTree.png">
+                    <figcaption>Fig.1 - An ox under a tree</figcaption>
+                    <br>
+                    <button onclick="homePageLink()" class="button backgroundDarkBlue centre-text">Home</button>
 
+                </section>
             </section>
-        </section>
 
-        </form>
-        <script src="linksButtons.js"></script>
-        <script src="endPage.js"></script>
+            </form>
+            <script src="linksButtons.js"></script>
+            <script src="endPage.js"></script>
 
     </body>
