@@ -495,6 +495,29 @@ im touching stuff
 
 }
 
+#pillar {
+    height: 255px;
+    display: flex;
+}
+
+#russian_nesting_doll {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: yellow;
+}
+
+#Scenario_counter {
+    display: flex;
+    align-self: center;
+}
+
+#row_within_column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 /* #inner-senario-box-perent {
     background-color: #590749;
     display: flex;
