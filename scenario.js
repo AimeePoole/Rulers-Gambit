@@ -15,6 +15,10 @@ fetch('http://127.0.0.1:8000/scenarioDetails')
     document.getElementById("getOption2").innerHTML = data.options[1].optionDescription;
     document.getElementById("getOption3").innerHTML = data.options[2].optionDescription;
     document.getElementById("getOption4").innerHTML = data.options[3].optionDescription;
+
+
+
+
   });
 
 
@@ -24,6 +28,13 @@ fetch('http://127.0.0.1:8000/scenarioDetails')
 function getOptionPickedId() {
   if (!scenarioData) {
     document.getElementById("result").innerHTML = "Error: data not found";
+    return;
+  }
+
+  const checkSelected = document.querySelector('input[name="Options"]:checked');
+
+  if (!checkSelected) {
+    alert("Please select an option first.");
     return;
   }
 
@@ -52,7 +63,6 @@ function getOptionPickedId() {
     text += '\n';
   });
   alert(text)
-  
 
 
   if (!mechanics || mechanics.length === 0) {
