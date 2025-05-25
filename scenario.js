@@ -16,11 +16,15 @@ fetch('http://127.0.0.1:8000/scenarioDetails')
     document.getElementById("getOption4").innerHTML = data.options[3].optionDescription;
 });
 
-
-
-
 //this uses the option picked to change the stats based on the affects 
 function getOptionPickedId() {
+  //if no radio button checked error message
+  const checkSelected = document.querySelector('input[name="Options"]:checked');
+  if (!checkSelected) {
+    alert("Please select an option first.");
+    return;
+  }
+
 
   //note this could get the stat names through the json file but i refuse to fix that right now 
   const statNames = {
@@ -50,13 +54,6 @@ function getOptionPickedId() {
   //if there is no data error message
   if (!scenarioData) {
     document.getElementById("result").innerHTML = "Error: data not found";
-    return;
-  }
-
-  //if no radio utton checked error message
-  const checkSelected = document.querySelector('input[name="Options"]:checked');
-  if (!checkSelected) {
-    alert("Please select an option first.");
     return;
   }
 
@@ -116,8 +113,13 @@ fetch('http://127.0.0.1:8000/playerStats')
       statsStyled += item.statName + ": " + item.statsValue + "<br>";
     });
 
-    // gets the correct html element
-    document.getElementById("getStats").innerHTML = statsStyled;
+    //put each stat value in the table beside the correct stat
+    document.getElementById("economy_stat").innerHTML =  data[0].statsValue;
+    document.getElementById("military_stat").innerHTML =  data[1].statsValue;
+    document.getElementById("security_stat").innerHTML =  data[2].statsValue;
+    document.getElementById("welfare_stat").innerHTML =  data[3].statsValue;
+    document.getElementById("education_stat").innerHTML =  data[4].statsValue;
+    document.getElementById("agriculture_stat").innerHTML =  data[5].statsValue;
   });
 
   
