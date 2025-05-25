@@ -1,0 +1,36 @@
+<!-- inactive -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+This contains the meta information, the title and the link to the css style sheet
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  this displays a small image of a crown in the browser tab -->
+    <link rel="icon" type="image/x-icon" href="Media\faviconCrown.ico">
+    <title>The Asasination</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <section class="borderBox backgroundDarkBlue">
+        <section class="animation-container box backgroundLightCream">
+            <section class="animation-container">
+                <section class="animation-item">
+                    <video id="animation" autoplay controls class="animation">
+                        <source src="Media\animation.mp4" type="video/mp4">
+                    </video>
+                </section>
+
+                <section class="animation-item">
+                    <button onclick="lorePageLink()" class="button backgroundDarkBlue centre-text">Next</button>
+                </section>
+            </section>
+        </section>
+    </section>
+    <script src="linksButtons.js"></script>
+</body>
