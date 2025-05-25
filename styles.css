@@ -514,8 +514,8 @@ im touching stuff
 #row_within_column {
     display: flex;
     flex-direction: row;
-    align-content: center;
     background-color: plum;
+    align-content: space-between;
 }
 
 #Buttons {
@@ -523,8 +523,6 @@ im touching stuff
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    background-color: pink;
-
 }
 
 /* #inner-senario-box-perent {
