@@ -43,7 +43,7 @@ function checkSum() {
     window.location.href = "senario_page.html";
 
   }
-  //error message for if the su doesnt equal 20
+  //error message for if the sum doesnt equal 20
   else {
     result.textContent = `The sum is ${total}. Try again!`;
     result.style.color = '#FF3333';

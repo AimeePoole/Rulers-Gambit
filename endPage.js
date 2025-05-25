@@ -4,8 +4,10 @@ fetch('http://127.0.0.1:8000/playerStats')
   .then(function (response) {
     return response.json();
   })
+  //this gets the data
   .then(function (data) {
     console.log(data);
+
     let total = 0;
 
     // let each stat be output like "Economy: 3"
