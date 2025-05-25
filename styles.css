@@ -274,31 +274,64 @@ Section: Lore_Page
    Section: animation_page
    ============================ */
 
-/*this makes the aanimation fill almost the full screen*/
-.animation {
-    max-height: 97vh;
-    max-width: 100%;
-    border-radius: 10%;
-}
-
-/*this flex box puts the nex button on the same line as the animation*/
-.animation-container {
+.animationContainer {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    flex: 2 1 0px;
+    
+}
+
+.left-side {
+    flex: 1 1 0px;
+
+}
+
+.animationItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: end;
-    max-width: 100%;
+    align-items: center;
 }
 
-.animation-item {
-    max-height: 96dvh;
+.paper {
+    width: 20svw;
 }
 
-#animation {
-    max-height: 80dvh;
+#assasination {
+    border-radius: 15px;
+    max-height: 100svh;
+    max-width: 100Svh;
+    border-color: #FAEDCF;
+    border-width: 30px;
+    border-style: solid;
 }
 
+@media (max-width: 1000px) {
+    .animationContainer {
+        flex-direction: column;
+    }
 
+    .animationItem {
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    .paper {
+        width: 80svw;
+    }
+}
 
 
 /* ============================
