@@ -14,10 +14,6 @@ fetch('http://127.0.0.1:8000/scenarioDetails')
     document.getElementById("getOption2").innerHTML = data.options[1].optionDescription;
     document.getElementById("getOption3").innerHTML = data.options[2].optionDescription;
     document.getElementById("getOption4").innerHTML = data.options[3].optionDescription;
-      
-
-    
-
 });
 
 
@@ -43,7 +39,7 @@ function getOptionPickedId() {
           scenarioData.options.forEach(option => {
             text += `Option: ${option.optionDescription}\n`;
             option.optionMechanic.forEach(mechanic => { 
-            const statName = statNames[mechanic.stat_id] || `Stat ID: ${mechanic.stat_id}`;
+            const statName = statNames[mechanic.stat_id] || `${mechanic.stat_id}`;
             text += `${statName} : ${mechanic.option_Mechanic}\n`;
             });
             text += '\n';
@@ -95,18 +91,11 @@ function getOptionPickedId() {
         stat_id: statId
       }),
     })
-    //optput what hppend to the console to check it worked
-    .then(response => response.json())
-    .then(result => {
-      console.log("Stat updated:", result);
-      
-    })
     //catch error just incase
     .catch(error => {
       console.error("Error sending stat:", error);
     });
   }
-  
 }
 
 
