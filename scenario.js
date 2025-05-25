@@ -101,6 +101,7 @@ function getOptionPickedId() {
       console.log("Stat updated:", result);
       
     })
+    //catch error just incase
     .catch(error => {
       console.error("Error sending stat:", error);
     });
