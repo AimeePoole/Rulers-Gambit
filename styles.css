@@ -508,7 +508,7 @@ im touching stuff
     background-color: yellow;
 }
 
-#Scenario_counter {
+#result {
     display: flex;
     align-self: center;
 }
