@@ -431,6 +431,8 @@ im touching stuff
 #stats_title {
     width: 25%;
     height: 20%;
+    display: flex;
+    align-self: center;
 }
 
 .left-side {
@@ -455,8 +457,8 @@ im touching stuff
     background-color: #444484;
     color: white;
     display: flex;
-    align-content: center;
-    justify-content: space-between;
+    flex-direction: column;
+    
 }
 
 #main-page-map {
