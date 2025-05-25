@@ -15,11 +15,11 @@ fetch('http://127.0.0.1:8000/scenarioDetails')
     document.getElementById("getOption2").innerHTML = data.options[1].optionDescription;
     document.getElementById("getOption3").innerHTML = data.options[2].optionDescription;
     document.getElementById("getOption4").innerHTML = data.options[3].optionDescription;
+      
 
+    
 
-
-
-  });
+});
 
 
 
@@ -37,7 +37,6 @@ function getOptionPickedId() {
     alert("Please select an option first.");
     return;
   }
-
   const selected = parseInt(document.querySelector('input[name="Options"]:checked').value);
 
   const selectedOption = scenarioData.options[selected];
@@ -52,16 +51,16 @@ function getOptionPickedId() {
     "5": "Education",
     "6": "Agriculture"
   }
-
+  
   let text = "These are the result of the options: \n\n";
-  scenarioData.options.forEach(option => {
-    text += `Option: ${option.optionDescription}\n`;
-    option.optionMechanic.forEach(mechanic => {
-      const statName = statNames[mechanic.stat_id] || `Stat ID: ${mechanic.stat_id}`;
-      text += `${statName} : ${mechanic.option_Mechanic}\n`;
-    });
-    text += '\n';
-  });
+          scenarioData.options.forEach(option => {
+            text += `Option: ${option.optionDescription}\n`;
+            option.optionMechanic.forEach(mechanic => { 
+            const statName = statNames[mechanic.stat_id] || `Stat ID: ${mechanic.stat_id}`;
+            text += `${statName} : ${mechanic.option_Mechanic}\n`;
+            });
+            text += '\n';
+          });
   alert(text)
 
 
@@ -86,16 +85,16 @@ function getOptionPickedId() {
         stat_id: statId
       }),
     })
-      .then(response => response.json())
-      .then(result => {
-        console.log("Stat updated:", result);
-
-      })
-      .catch(error => {
-        console.error("Error sending stat:", error);
-      });
+    .then(response => response.json())
+    .then(result => {
+      console.log("Stat updated:", result);
+      
+    })
+    .catch(error => {
+      console.error("Error sending stat:", error);
+    });
   }
-
+  
 }
 
 
@@ -120,7 +119,7 @@ fetch('http://127.0.0.1:8000/playerStats')
     document.getElementById("getStats").innerHTML = statsStyled;
   });
 
-
+  
 
 
 
