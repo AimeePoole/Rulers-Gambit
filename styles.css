@@ -487,9 +487,10 @@ im touching stuff
     background-color: #448453;
     color: white;
     display: flex;
-    justify-content: space-between;
     justify-content: center;
     flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
 
 }
 
@@ -518,6 +519,7 @@ im touching stuff
 }
 
 #Buttons {
+    width: 95%;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
