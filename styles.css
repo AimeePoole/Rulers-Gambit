@@ -693,6 +693,9 @@ Section: Pop ups/ Post its
     box-shadow: 0 0 5px;
 }
 
+.grave-image {
+    height: 150px;
+}
 
 /* ============================
    Section: end_page
