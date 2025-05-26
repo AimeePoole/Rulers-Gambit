@@ -75,6 +75,10 @@ function getOptionPickedId() {
   for (let i = 0; i < mechanics.length; i++) {
     const mechanicValue = mechanics[i].option_Mechanic;
     const statId = mechanics[i].stat_id;
+    if(mechanicValue <= 0)
+    {
+          window.location.href = "loser_page.html";
+    }
 
     //fetch the statsChange so tht this will effect the stats
     fetch("http://127.0.0.1:8000/statsChange", {
