@@ -143,10 +143,10 @@ def input_statChange():
     cursor.execute(
                 '''
                 UPDATE playerStats
-                SET statsValue = statsValue + ?
+                SET statsValue = ?
                 WHERE player_id = ? AND stats_id = ?
                 ''',
-                (data['option_Mechanic'], player_id, data['stat_id'])
+                (data['stats_value'], player_id, data['stat_id'])
     )
 
 
@@ -154,22 +154,6 @@ def input_statChange():
     db.close()
     print(cursor.rowcount, "rows affected")
     return jsonify(data)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
