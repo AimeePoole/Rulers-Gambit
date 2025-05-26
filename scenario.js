@@ -108,6 +108,12 @@ function getOptionPickedId() {
           .catch(error => {
             console.error("Error sending stat:", error);
           });
+
+        if(newStat <= 0)
+        {
+          window.location.href = "loser_page.html";
+        }
+
       }
 
 
