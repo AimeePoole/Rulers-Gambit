@@ -8,3 +8,4 @@ animation_page.html("#spin_button").onclick = function() {
   }, 4000);
 };
 }
+
