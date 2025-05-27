@@ -341,13 +341,24 @@ Section: Lore_Page
 }
 
 #news_paper {
-    animation-duration: 4s;
+    animation-duration: 2.5s;
 }
 
 @keyframes example {
   0%   {transform: rotate(0deg)}
   100% {transform: rotate(360deg)}
+
+   0% {
+    scale: 100%;
+  }
+  50% {
+    scale: 150%;
+  }
+  100% {
+    scale: 100%;
+  }
 }
+
 
 
 /* ============================
