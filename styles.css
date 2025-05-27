@@ -340,6 +340,15 @@ Section: Lore_Page
     }
 }
 
+#news_paper {
+    animation-duration: 4s;
+}
+
+@keyframes example {
+  0%   {transform: rotate(0deg)}
+  100% {transform: rotate(360deg)}
+}
+
 
 /* ============================
 Section: Rules page    
