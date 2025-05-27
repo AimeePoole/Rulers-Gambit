@@ -26,7 +26,7 @@ a {
 
 /* ============================
    Section: Object widths
-   Description: this sets an object to be 100% or %0% the width of its parent container
+   Description: this sets an object to be 100% or 50% the width of its parent container
    ============================ */
 .width100 {
     width: 100%;
@@ -88,7 +88,6 @@ a {
    ============================ */
 
 .button {
-
     font-size: 18px;
     cursor: url('Media/hand-cursor.png'), auto;
     /*this shows a pixelated hand when the user hovers over buttons*/
@@ -99,7 +98,6 @@ a {
 }
 
 .buttonLarge {
-
     font-size: 24px;
     cursor: url('Media/hand-cursor.png'), auto;
     /*this shows a pixelated hand when the user hovers over buttons*/
@@ -203,12 +201,22 @@ body#home {
     align-self: center;
     width: 80%;
     object-fit: contain;
-    /* makes image fit in  box without cutting off */
+    /* makes image fit in box without cutting off */
 }
 
 .OxAndTree {
     max-height: 30vh;
     display: block;
+    
+    position: relative;
+    animation-name: image;
+    animation-duration: 3s;
+}
+
+@keyframes image {
+  0% {right:0px; bottom:0px;}
+  50% {right:450px; bottom:180px; max-height: 70vh; ;}
+  100% {right:0px; bottom:0px;}
 }
 
 .button-container-big {
@@ -232,7 +240,7 @@ body#home {
 
 
 /* ============================
-Section: Lore_Page   
+Section: Lore_Page
 ============================ */
 
 /*flex box container where items are in rows until the screen is too small then it is in a column*/
@@ -248,8 +256,7 @@ Section: Lore_Page
     box-sizing: border-box;
 }
 
-.map-container
-{
+.map-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -283,7 +290,7 @@ Section: Lore_Page
 
 .right {
     flex: 2 1 0px;
-    
+
 }
 
 .left-side {
@@ -358,13 +365,18 @@ im touching stuff
     justify-content: flex-start;
 }
 
-#rules_body{
+#rules_body {
     animation: grow 1s;
 }
 
 @keyframes grow {
-     0% { transform: scale(.2); }
-     100% { transform: scale(1); }
+    0% {
+        transform: scale(.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 
@@ -588,17 +600,17 @@ im touching stuff
 
 
 
-td{
-    padding: 0.5vb; /* Optional: Add padding for content */
+td {
+    padding: 0.5vb;
+    /* Optional: Add padding for content */
 }
 
-.table_right
-{
-    text-align:right;
+.table_right {
+    text-align: right;
 }
 
 /* ============================
-Section: Pop ups/ Post its   
+Section: Pop ups/Post its   
 ============================ */
 
 /*https://www.geeksforgeeks.org/how-to-create-popup-box-using-html-and-css/*/
@@ -704,3 +716,16 @@ Section: Pop ups/ Post its
 .end_image {
     width: 20vw;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

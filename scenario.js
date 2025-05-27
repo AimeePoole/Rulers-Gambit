@@ -71,6 +71,7 @@ function getOptionPickedId() {
   }
 
 
+  //fetches the players current stats
   fetch('http://127.0.0.1:8000/playerStats')
     .then(function (response) {
       return response.json();
@@ -85,7 +86,7 @@ function getOptionPickedId() {
         //get the stat id
         const statId = mechanics[i].stat_id;
         //get the current stat value
-        const currentStat = data[parseInt(statId)-1].statsValue;
+        const currentStat = data[parseInt(statId) - 1].statsValue;
         //get the new stat value (this used to be done in sql but that ment i couldn't calculate when it reached 0)
         const newStat = currentStat + mechanicValue;
 
@@ -109,18 +110,13 @@ function getOptionPickedId() {
             console.error("Error sending stat:", error);
           });
 
-        if(newStat <= 0)
-        {
+        //if any stats reach zero go to the loser page
+        if (newStat <= 0) {
           window.location.href = "loser_page.html";
         }
-
       }
-
-
-
-
-    });
-
+    }
+    );
 }
 
 
@@ -134,12 +130,6 @@ fetch('http://127.0.0.1:8000/playerStats')
   })
   .then(function (data) {
     console.log(data);
-    let statsStyled = "";
-
-    // let each stat be output like "Economy: 3"
-    data.forEach(item => {
-      statsStyled += item.statName + ": " + item.statsValue + "<br>";
-    });
 
     //put each stat value in the table beside the correct stat
     document.getElementById("economy_stat").innerHTML = data[0].statsValue;
