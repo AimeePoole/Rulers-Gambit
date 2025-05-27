@@ -1,4 +1,4 @@
-//active
+//inactive
 function animation_buttonid() {
   var spinner = document.getElementById('news_paper')
   //animation_page.html("#news_paper");
