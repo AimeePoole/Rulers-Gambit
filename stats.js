@@ -24,7 +24,7 @@ function checkSum() {
       headers: {
         "Content-Type": "application/json",
       },
-      //this insertes the stats
+      //this inserts the stats
       body: JSON.stringify({
         economy: Economy,
         military: Military,

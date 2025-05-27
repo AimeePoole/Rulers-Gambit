@@ -26,7 +26,7 @@ a {
 
 /* ============================
    Section: Object widths
-   Description: this sets an object to be 100% or %0% the width of its parent container
+   Description: this sets an object to be 100% or 50% the width of its parent container
    ============================ */
 .width100 {
     width: 100%;
