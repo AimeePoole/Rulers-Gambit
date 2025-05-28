@@ -16,23 +16,23 @@ This contains the meta information, the title and the link to the css style shee
 </head>
 
 <body>
+    <!-- section has the animationContainer wich puts the elements in a row and creates a dark blue box-->
     <section class="animationContainer borderBox backgroundDarkBlue">
         <section class="animationItem right box">
+            <!-- the animation -->
             <video id="assasination" autoplay controls>
-                <source id = "video" src="Media\animation.mp4" type="video/mp4" alt = "Asasination">
+                <source id = "video" src="Media\animation.mp4" type="video/mp4" alt = "Asasination animation">
             </video>
         </section>
+        <!-- section has the buttonContainer wich puts the elements in a column -->
         <section class="animationItem buttonContainer left borderBox">
-            <section class="buttonItem borderBox backgroundLightBlue">
-
+            <!-- section creates a light blue box-->
+            <section class="borderBox backgroundLightBlue">
                 <img id="news_paper" class="paper" src="Media\_Breaking News sacre bleu!.png">
                 <button onclick="animation_buttonid()" id="spin_button">Spin</button> <!--this button is calling a js function to rotate the img-->
 
             </section>
-
-            <section class="buttonItem">
-                <button onclick="lorePageLink()" class="button backgroundLightBlue centre-text">Next</button>
-            </section>
+                <button onclick="lorePageLink()" class="button backgroundLightBlue centre-text">Next</button>  <!-- calls a javascript funtion to go to the page -->
         </section>
     </section>
     <script src="linksButtons.js"></script>

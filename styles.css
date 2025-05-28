@@ -263,7 +263,7 @@ Section: Lore_Page
 }
 
 
-/* this has the lore-container items in a column instead of a row if the screen is too small making it easier to read
+/*changes the flex direction to a column if the screen is too small making it easier to read
 I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/ but changed the amount of pixels*/
 @media (max-width: 1000px) {
     .lore-container {
@@ -290,6 +290,7 @@ I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/
    Section: animation_page
    ============================ */
 
+/*has the animation and newspaper in a row*/
 .animationContainer {
     display: flex;
     flex-direction: row;
@@ -297,16 +298,11 @@ I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/
     align-items: center;
 }
 
-.right {
-    flex: 2 1 0px;
+/*makes the animation 2x the size of the newspaper*/
+.right {flex: 2 1 0px;}
+.left {flex: 1 1 0px;}
 
-}
-
-.left-side {
-    flex: 1 1 0px;
-
-}
-
+/*center the animation*/
 .animationItem {
     display: flex;
     flex-direction: column;
@@ -314,6 +310,7 @@ I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/
     align-items: center;
 }
 
+/*has the button and news paper in a column*/
 .buttonContainer {
     display: flex;
     flex-direction: column;
@@ -321,10 +318,12 @@ I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/
     align-items: center;
 }
 
+/*sets the papers size*/
 .paper {
     width: 20svw;
 }
 
+/*sets the animations size and give it a cream border*/
 #assasination {
     border-radius: 15px;
     /*svw wont work it will break as the element is in a section*/
@@ -335,6 +334,7 @@ I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/
     border-style: solid;
 }
 
+/*changes the flex direction to a column if the screen is too small making it easier to read*/
 @media (max-width: 1000px) {
     .animationContainer {
         flex-direction: column;
@@ -345,6 +345,7 @@ I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/
         box-sizing: border-box;
     }
 
+    /*changes the paper size as its now in a column*/
     .paper {
         width: 80svw;
     }
