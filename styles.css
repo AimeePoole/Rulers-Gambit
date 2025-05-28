@@ -618,15 +618,15 @@ I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/
 */
 
 
-
+/*adds padding to the table and has the number align with the right*/
 td {
     padding: 0.5vb;
-    /* Optional: Add padding for content */
 }
 
 .table_right {
     text-align: right;
 }
+
 
 /* ============================
 Section: Pop ups/Post its   
