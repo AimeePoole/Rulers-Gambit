@@ -192,8 +192,6 @@ body#home {
     height: 100vh;
     /* Ensures it fills the entire screen */
     box-sizing: border-box;
-
-
 }
 
 .home-main-item {
@@ -218,7 +216,6 @@ body#home {
     justify-content: flex-end;
     flex-wrap: wrap;
 }
-
 
 
 .OxAndTree {
@@ -261,6 +258,7 @@ Section: Lore_Page
 .lore-item {
     align-self: stretch;
     box-sizing: border-box;
+    flex: 1  1 10px;
 }
 
 .map-container {
@@ -283,6 +281,12 @@ Section: Lore_Page
     }
 }
 
+#introducton
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 /* ============================
    Section: animation_page
@@ -325,8 +329,9 @@ Section: Lore_Page
 
 #assasination {
     border-radius: 15px;
+    /*svw wont work it will break as the element is in a section*/
+    max-width: 100%;
     max-height: 100svh;
-    max-width: 100Svh;
     border-color: #FAEDCF;
     border-width: 30px;
     border-style: solid;
