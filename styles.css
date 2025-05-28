@@ -249,40 +249,36 @@ Everything centred and fills the screen*/
 Section: Lore_Page
 ============================ */
 
-/*flex box container where items are in rows until the screen is too small then it is in a column*/
+/*flex box container where the text and map are in a row*/
 .lore-container {
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
 }
 
-/*stretch lets the item fill the container*/
+/*makes sure the items in the lore container are equal in size*/
 .lore-item {
-    align-self: stretch;
     box-sizing: border-box;
     flex: 1  1 10px;
 }
 
+
+/* this has the lore-container items in a column instead of a row if the screen is too small making it easier to read
+I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/ but changed the amount of pixels*/
+@media (max-width: 1000px) {
+    .lore-container {
+        flex-direction: column;
+    }
+}
+
+/*contains the map and next button*/
 .map-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-
-/* I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/ but changed the amount of pixels*/
-@media (max-width: 1000px) {
-    .lore-container {
-        flex-direction: column;
-    }
-
-    .lore-item {
-        display: flex;
-        flex-direction: column;
-        box-sizing: border-box;
-    }
-}
-
+/*spaces out the introduction text and borders so it fills the box and doesn't leave white (or cream) space*/
 #introducton
 {
     display: flex;
