@@ -18,3 +18,6 @@ fetch('http://127.0.0.1:8000/playerStats')
     // gets the correct html element
     document.getElementById("endScore").innerHTML = total;
   });
+
+//reset scenario counter so game can be replayed
+localStorage.setItem('result', 0);

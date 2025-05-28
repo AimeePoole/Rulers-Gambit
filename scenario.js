@@ -143,5 +143,31 @@ fetch('http://127.0.0.1:8000/playerStats')
 
 
 
+//try prevents the game from breaking if this doent work
+//issue if you click refresh it still increments
+try {
+  //gets the count value from localStorage its set as 0 if it hasn't been created yet
+  //it uses this because the value will stay when the page is refreshed 
+  //https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+  let count = parseInt(localStorage.getItem('result')) || 0;
+  //increase count 
+  count++;
 
+  // Save the updated count
+  localStorage.setItem('result', count);
+
+  //check if count reached 6
+  if (count >= 6) {
+    //reset count
+    localStorage.setItem('result', 0);
+    //goes to end page
+    window.location.href = "end_page.html";
+  }
+
+  //shows count on pillar
+  document.getElementById('result').innerHTML = count;
+}
+catch {
+  document.getElementById('result').innerHTML = error;
+}
 
