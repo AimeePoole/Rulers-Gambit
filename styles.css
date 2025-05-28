@@ -724,7 +724,7 @@ Section: Pop ups/Post its
 /* ============================
    Section: end_page
    ============================ */
-
+/*sets image width*/
 .end_image {
     width: 20vw;
 }
