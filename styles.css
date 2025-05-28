@@ -155,46 +155,50 @@ body#home {
     margin: 0px !important;
     padding: 0px !important;
     height: 100%;
+    /*calls the home animation*/
     animation: home 2s;
 }
 
-
+/*Zooms in on the screen*/
 @keyframes home {
     0% { transform: scale(.2); }
   100% { transform: scale(1); }
 }
 
-
+/*This controls the size and position of the title image*/
 .title-image {
     padding: 5px;
     align-self: center;
     width: 80%;
-    object-fit: contain;
-    /* makes image fit in box without cutting off */
     animation: title 2s;
 }
 
+/*Zooms in on the title then zooms back out a bit*/
 @keyframes title {
     0% { transform: scale(.05); }
     50% { transform: scale(1.4); }
     100% { transform: scale(1); }
 }
 
+/*adds a margin and padding to certain elements*/
 .margin-box {
     margin: 10px;
     padding: 10px;
 }
 
+/*This contains all the home page it has 3 items in a column
+the title, the main buttons, and the small buttons with the ox and tree image
+Everything centred and fills the screen*/
 .home-main-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
     height: 100vh;
     /* Ensures it fills the entire screen */
     box-sizing: border-box;
 }
 
+/*these are the 3 items in the home-main-container*/
 .home-main-item {
     align-self: stretch;
     box-sizing: border-box;
@@ -203,6 +207,7 @@ body#home {
     /* Align to the top of the screen */
 }
 
+/*this contains 2 items the small buttons and the ox and tree image in a row with all the space inbetween them*/
 .home-sub-container {
     display: flex;
     flex-direction: row;
@@ -211,20 +216,15 @@ body#home {
     box-sizing: border-box;
 }
 
-.home-sub-item {
-    align-self: stretch;
-    box-sizing: border-box;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-}
 
-
+/*sets the size of the ox and tree image compared to the screen*/
 .OxAndTree {
     max-height: 30vh;
     display: block;
     
 }
 
+/*allows the big buttons to wrap is too little space and spaces them out*/
 .button-container-big {
     display: flex;
     flex-direction: row;
@@ -234,6 +234,7 @@ body#home {
     flex-wrap: wrap;
 }
 
+/*positions the small buttons and useds a flex box to have them in column*/
 .button-container-small {
     display: flex;
     flex-direction: column;
