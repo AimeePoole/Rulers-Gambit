@@ -631,9 +631,9 @@ td {
 /* ============================
 Section: Pop ups/Post its   
 ============================ */
-
 /*https://www.geeksforgeeks.org/how-to-create-popup-box-using-html-and-css/*/
 
+/*centers the pop up with the screen and grays out everything behind it*/
 .popup {
     display: none;
     position: fixed;
@@ -646,49 +646,42 @@ Section: Pop ups/Post its
     align-items: center;
 }
 
+/*centers the text and adds a margin and padding*/
 .popup-content {
-    background: #fff;
     padding: 20px;
     border-radius: 5px;
     text-align: center;
 }
 
-
+/*button colour*/
 .backgroundPostitButton {
     background-color: #edd684;
     color: rgb(0, 0, 0);
 }
 
+/*post it background colour*/
 .backgroundPostit {
     background-color: #ffedae;
     color: rgb(0, 0, 0);
 }
 
+/* curves edges, centers elements horizontally and vertically, make sit a square and rotates by 1 degree */
 .postit {
+    margin: 10px;
+    padding: 20px;
     border-radius: 3px;
     display: flex;
     justify-content: center;
-    /* Centers horizontally */
     align-items: center;
-    aspect-ratio: 1 / 1;
-    transform-origin: top left;
-    /* Pivot point */
-    transform: rotate(1deg);
+    aspect-ratio: 1 / 1; /* makes a square */ 
+    transform: rotate(1deg); /*rotates the postit*/
 }
 
+/*adds a 2 toned vignette to the postit for realism*/
 .vignette {
     box-shadow: 0 0 50px #edd684 inset;
     box-shadow: 0 0 20px #ab9b58 inset;
 }
-
-
-.postit {
-    margin: 10px;
-    padding: 20px;
-}
-
-
-
 
 
 
