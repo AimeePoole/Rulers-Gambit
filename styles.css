@@ -13,11 +13,11 @@ body {
 
 /*it's 1am and I'm making cursors <3*/
 /*this shows a pixelated hand when the user hovers over links*/
-
 a {
     cursor: url('Media/hand-cursor.png'), auto;
 }
 
+/*This centres text*/
 .centre-text {
     text-align: center;
 }
@@ -119,6 +119,7 @@ a {
     width: 140px;
 }
 
+/*These change the style of the buttons when the user hovers the mouse over them*/
 button:hover {
     background-color: #4d5ea0 !important;
 }
@@ -331,9 +332,9 @@ Section: Lore_Page
     border-radius: 15px;
     /*svw wont work it will break as the element is in a section*/
     max-width: 100%;
-    max-height: 100svh;
+    max-height: 100vh;
     border-color: #FAEDCF;
-    border-width: 30px;
+    border-width: 25px;
     border-style: solid;
 }
 
