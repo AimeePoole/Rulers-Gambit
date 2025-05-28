@@ -77,22 +77,26 @@ connect.execute(
 
 
 cursor = connect.cursor()
-cursor.execute('INSERT INTO catagory\
+cursor.execute('INSERT INTO catagory \
     (id, catagoryName) ' \
-    'VALUES ("c1", "Weather")')
+    'VALUES ("c1", "Weather"),' \
+    ' ("c2", "military"),' \
+    ' ("c3", "assist"),' \
+    ' ("c4", "national"),' \
+    ' ("c5", "other")')
 
 cursor.execute('INSERT INTO phase\
     (id, phaseName) ' \
-    'VALUES ("p1", "Phase 1")')
-
+    'VALUES ("p1", "Phase 1"),' \
+    '("p2", "Phase 2"),' \
+    '("p3", "Phase 3")')
 
 
 cursor.execute('INSERT INTO scenario \
     (id, scenarioDescription, catagory_id, phase_id) VALUES \
-    ("s1", "A heatwave has swept the nation, resulting in civil unrest and exstresive damage to crops. You must find a way to rectifi the sitchuation will you?", "c1", "p1"), \
-    ("s2", "A storm has hit your southern frount, disrupting trade, uprooting citizens and damaging infulstructure. How will you respond?", "c1", "p1"), \
-    ("s3", "The rains have been barren for servil days, people are running out of water, and drying on the streets, the crops wither in reflection, what will you do?", "c1", "p1")')
-
+    ("s1", "A heatwave has swept the nation, resulting in civil unrest and extensive damage to crops. You must find a way to rectify the situations, will you?", "c1", "p1"), \
+    ("s2", "A storm has hit your southern front, disrupting trade, uprooting citizens and damaging infrastructure. How will you respond?", "c1", "p1"), \
+    ("s3", "The rains have been barren for several days, people are running out of water, and drying on the streets, the crops wither in reflection, what will you do?", "c1", "p1")')
 
 cursor.execute('INSERT INTO stats \
     (id, statName) VALUES \
@@ -117,6 +121,7 @@ cursor.execute('INSERT INTO options \
     ("o32", "Fund a mass research project", "s3"), \
     ("o33", "Cull the few to protect the many, kill a small population to conserve resources", "s3"), \
     ("o34", "Cry", "s3")')
+
 
 
 cursor.execute('INSERT INTO affects \
