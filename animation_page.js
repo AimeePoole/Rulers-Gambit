@@ -6,7 +6,7 @@ function animation_buttonid() {
   document.getElementById('spin_button').onclick = function () {
     spinner.style.animationName = "example";
     setTimeout(function () {
-      spinner.style.animationName = "";
+      spinner.style.animationName = "";  //this code rotates the img on click of the spin button
     }, 4000);
   };
 }
