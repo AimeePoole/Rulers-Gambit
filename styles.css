@@ -408,7 +408,7 @@ im touching stuff
 /* ============================
    Section: stats_page
    ============================ */
-
+/*sets the title images' size and margins*/
 .stats-image {
     width: 40%;
     display: block;
@@ -418,9 +418,7 @@ im touching stuff
     margin-bottom: 20px;
 }
 
-
-
-
+/*styles the enter bar for each stat*/
 .block {
     display: grid;
     grid-template-columns: 1fr 60px;
@@ -430,32 +428,18 @@ im touching stuff
     gap: 10px;
 }
 
+/*has the stats and countries in a row*/
 .statsP-container {
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
 }
 
-.statsP-item {
-    align-self: stretch;
-    box-sizing: border-box;
-}
+/*the stats is half the size of counties when in a column*/
+#enter_stats {flex: 1 1 0px;}
+#countries_details {flex: 2 1 0px;}
 
-#enter_stats {
-    flex: 1 1 0px;
-}
-
-#countries_details {
-    flex: 2 1 0px;
-}
-
-.countries-item {
-    box-sizing: border-box;
-    flex: 1 1 0px;
-    align-items: center;
-    justify-content: center;
-}
-
+/**has the countries details and map in a row*/
 .countries-container {
     display: flex;
     flex-direction: row;
@@ -464,13 +448,23 @@ im touching stuff
     justify-content: center;
 }
 
-/* I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/ but changed the amount of pixels*/
+/*pervents the map from squishing te countries and overflowing the page*/
+.countries-item {
+    box-sizing: border-box;
+    flex: 1 1 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* the rows in the statsP-container and countries-container become columns
+I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/ but changed the amount of pixels*/
 @media (max-width: 1000px) {
     .statsP-container {
         flex-direction: column;
     }
 
-    .statsP-item {
+    .countries-container {
         flex-direction: column;
         box-sizing: border-box;
     }
