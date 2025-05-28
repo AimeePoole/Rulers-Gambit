@@ -16,37 +16,41 @@ This contains the meta information, the title and the link to the css style shee
 </head>
 
 <!--there is some inline styling to get rid of the margin that all bodies have as i couldn't get !inportant to overwrite it-->
-
 <body class="home-main-container" id="home" style="margin: 0;">
 
     <img class="home-main-item title-image" src="Media\RulersGambitTitle.png" alt="Ruler's Gambit title">
-
+    
+    <!-- section has the big buttons in a row spaced out -->
     <section class="home-main-item button-container-big margin-box">
-        <button onclick="animationPageLink()" class="buttonLarge centre-text">Play</button>
+        <button onclick="animationPageLink()" class="buttonLarge centre-text">Play</button>  <!-- calls a javascript funtion to go to the page -->
         <!--these are the main button that lead the user through the game-->
-        <button onclick="rulesPageLink()" class="buttonLarge centre-text">Rules</button>
+        <button onclick="rulesPageLink()" class="buttonLarge centre-text">Rules</button>  <!-- calls a javascript funtion to go to the page -->
     </section>
 
 
+    <!-- section has the small buttons and the image spaced out -->
     <section class="home-sub-container home-main-item">
+        <!-- section has the small buttons in a column -->
         <section class="margin-box button-container-small">
-            <button onclick="underConstructionPageLink()"
-                class="button backgroundDarkBlue centre-text">Leaderboard</button>
+            <button onclick="underConstructionPageLink()" class="button backgroundDarkBlue centre-text">Leaderboard</button> <!-- calls a javascript funtion to give an alreat that the page isn't available -->
             <!--while these pages dont link to anything the are part of the infulstructure we would like to add in the futcher-->
-            <button onclick="underConstructionPageLink()"
-                class="button backgroundDarkBlue centre-text">Settings</button>
+            <button onclick="underConstructionPageLink()" class="button backgroundDarkBlue centre-text">Settings</button>
         </section>
 
+        <!-- section has the ox and tree image with a margin and padding -->
         <section class="margin-box">
             <img class="OxAndTree" src="Media\OxAndTree.png">
-            <figcaption>Fig.1 - An ox under a tree</figcaption>
+            <figcaption>Fig.1 - An ox under a tree</figcaption> 
         </section>
     </section>
+    
+    <!-- credits -->
     <p>Music by <a
             href="https://pixabay.com/users/playsound-24686998/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=216819">Playsound</a>
         from <a
             href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=216819">Pixabay</a>
     </p>
+    <!-- music -->
     <audio autoplay>
         <source src="Media\epic-drums-216819.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
