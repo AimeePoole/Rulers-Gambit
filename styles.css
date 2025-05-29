@@ -588,7 +588,6 @@ I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/
     display: flex;
     flex-direction: column;
     align-content: center;
-    background-color: yellow;
 }
 
 #result {
@@ -599,8 +598,6 @@ I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/
 #row_within_column {
     display: flex;
     flex-direction: row;
-    background-color: plum;
-    align-content: space-between;
 }
 
 #Buttons {
