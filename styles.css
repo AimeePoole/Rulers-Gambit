@@ -354,7 +354,7 @@ I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/
 #news_paper {
     animation-duration: 2.5s;
 }
-
+/*animation for the news paper rotates it while increasing its scale */
 @keyframes example {
   0%   {transform: rotate(0deg)}
   100% {transform: rotate(360deg)}
@@ -370,6 +370,7 @@ I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/
 Section: Rules page    
 im touching stuff 
 ============================ */
+/*setting a containter fore the example scenario*/
 #Rules-example {
     margin: 10px;
     border-radius: 15px;
@@ -393,7 +394,7 @@ im touching stuff
 #rules_body {
     animation: grow 1s;
 }
-
+/*animated transition for the page*/
 @keyframes grow {
     0% {
         transform: scale(.2);
@@ -474,8 +475,9 @@ I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/
 /* ============================
    Section: senario-page
    MAIN PAGE AHH
+   There is some convilated flexbos stylign on this page 
    ============================ */
-
+/*this set the left and right side in a row and space between*/
 #Senario-body {
     width: 100%;
     margin: 0.5% auto;
@@ -485,7 +487,7 @@ I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/
     flex-direction: row;
     justify-content: space-between;
 }
-
+/*this excludes the title from the row and aligns self*/
 #title {
     height: 100px;
     width: 290px;
@@ -517,7 +519,7 @@ I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/
     display: flex;
     align-self: center;
 }
-
+/*this sets the colums for the left side of the page*/
 .left-side {
     width: 40%;
     height: auto;
@@ -525,6 +527,7 @@ I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/
     flex-direction: column;
 }
 
+/*this sets the colums for the right side of the page*/
 .right-side {
     width: 60%;
     height: auto;
@@ -532,6 +535,7 @@ I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/
     flex-direction: column;
 }
 
+/*this this the stats box where the players stats are displayed*/
 #stats-box {
     margin: 10px;
     border-radius: 15px;
@@ -563,6 +567,8 @@ I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/
     align-items: center;
     justify-content: space-between;
 }
+/*this is a box in a box sitchuation as the scenario box has different 
+sections for the scenario description and options*/
 
 #inner-senario-box {
     margin: 10px;
@@ -584,12 +590,16 @@ I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/
     display: flex;
 }
 
+/*this sets the counter and pillar as a collomn in the row of the map
+and the combination of the counter and the pillar*/
+
 #russian_nesting_doll {
     display: flex;
     flex-direction: column;
     align-content: center;
 }
 
+/*this is displaying the result of the counter*/
 #result {
     display: flex;
     align-self: center;
@@ -601,7 +611,7 @@ I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/
     justify-content: space-evenly;
 }
 
-
+/*styling for the game throy and submit buttons*/
 #Buttons {
     width: 95%;
     display: flex;
