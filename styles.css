@@ -595,10 +595,12 @@ I used this website https://css-tricks.com/the-new-css-media-query-range-syntax/
     align-self: center;
 }
 
-#row_within_column {
+#row_within_column_map_counter {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
+
 
 #Buttons {
     width: 95%;
