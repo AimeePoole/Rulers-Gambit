@@ -28,4 +28,9 @@ Links to the pages that connect to the database
 * **[scenario page](senario_page.html)**: where users answer scenarios
 * **[scenario Javascript](scenario.js)**: where scenarios and options text are fetched using a get method and where entered option used the option effects to change the user’s stats
 
-## Sources Used
+## Recources Document
+Links to a resources document of all the resources created for this project, including Figma, Lucid Chart, Canva, research documents, Excel spreadsheets and Trello.
+
+This link is only accessiblee through a Bath Spa email account.
+
+https://bathspaonline-my.sharepoint.com/:w:/g/personal/elizabeth_perry24_bathspa_ac_uk/EbnL1EdGVKJEuE_qvIc0h9wBzzk7SuUjHG6im7QqGWdn5g?e=VQEI1f
