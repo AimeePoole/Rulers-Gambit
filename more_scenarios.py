@@ -10,7 +10,8 @@ cursor = connect.cursor()
 cursor.execute('INSERT INTO scenario \
     (id, scenarioDescription, catagory_id, phase_id) VALUES \
     ("s5", "A plage of incets threten to inialte your crops, jepoidsing your trade and agriculde", "c1", "p1"), \' \
-    ("s10", "You hear rumors of an assasination attempt on your life, what do you do?", "c2", "p1")\
+    ("s10", "You hear rumors of an assasination attempt on your life, what do you do?", "c2", "p1"), \' \
+    ("s11", "Gaul asks you for help as they have been invaded by Tustland ", "c3", "p1")\ 
     ')
                
                
@@ -25,7 +26,9 @@ cursor.execute('INSERT INTO options \
     ("o101", "Run an investigation and start arresting people who are suspect ", "s10"), \
     ("o102", "Fortify your castle, barricade the walls to protect yourself ", "s10"), \
     ("o103", "let them try, no one would dear try and assassinate you ", "s10"), \
-    ("o104", "execute all your advisors just in case you get the right one ", "s10") \
+    ("o104", "execute all your advisors just in case you get the right one ", "s10"), \
+    ("o111", "Help Gaul by yourself ", "s11"), \
+    ("o112", "Negotiate with Kevian Rus to help and help yourself", "s11") \
     ')
     
                
@@ -51,4 +54,6 @@ cursor.execute('INSERT INTO affects \
     ("4","+1","o103"), \
     ("3","+1","o104"), \
     ("4","-1","o104"), \
+    ("3","-1","o111"), \
+    ("3","+1","o112"), \
     ')
