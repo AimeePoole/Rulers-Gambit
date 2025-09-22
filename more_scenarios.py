@@ -23,6 +23,7 @@ cursor.execute('INSERT INTO options \
     ("o101", "Run an investigation and start arresting people who are suspect ", "s10"), \
     ("o102", "Fortify your castle, barricade the walls to protect yourself ", "s10"), \
     ("o103", "let them try, no one would dear try and assassinate you ", "s10"), \
+    ("o104", "execute all your advisors just in case you get the right one ", "s10"), \
     
                
 
@@ -39,3 +40,11 @@ cursor.execute('INSERT INTO affects \
     ("4","-1","o53"), \
     ("3","-2","o54"), \
     ("4","-1","o54"), \
+    ("3","-1","o101"), \
+    ("2","+1","o101"), \
+    ("4","-1","o102"), \
+    ("3","+1","o102"), \
+    ("3","+2","o103"), \
+    ("4","+1","o103"), \
+    ("3","+1","o104"), \
+    ("4","-1","o104"), \
