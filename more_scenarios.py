@@ -9,11 +9,10 @@ cursor = connect.cursor()
 
 cursor.execute('INSERT INTO scenario \
     (id, scenarioDescription, catagory_id, phase_id) VALUES \
-    ("s5", "A plage of incets threten to inialte your crops, jepoidsing your trade and agriculde", "c1", "p1"), \' \
-    ("s10", "You hear rumors of an assasination attempt on your life, what do you do?", "c2", "p1"), \' \
-    ("s11", "Gaul asks you for help as they have been invaded by Tustland ", "c3", "p1")\' \
-    ("s12", "Kevian Rus is being surrounded by Tustland and the Uthman Empire ", "c3", "p1")\' \
-    ')
+    ("s5", "A plage of incets threten to inialte your crops, jepoidsing your trade and agriculde", "c1", "p1"),\
+    ("s10", "You hear rumors of an assasination attempt on your life, what do you do?", "c2", "p1"),  \
+    ("s11", "Gaul asks you for help as they have been invaded by Tustland ", "c3", "p1"), \
+    ("s12", "Kevian Rus is being surrounded by Tustland and the Uthman Empire ", "c3", "p1")')
                
                
 
@@ -29,11 +28,10 @@ cursor.execute('INSERT INTO options \
     ("o103", "let them try, no one would dear try and assassinate you ", "s10"), \
     ("o104", "execute all your advisors just in case you get the right one ", "s10"), \
     ("o111", "Help Gaul by yourself ", "s11"), \
-    ("o112", "Negotiate with Kevian Rus to help and help yourself", "s11") \' \
-    ("o121", "Help Kevian Rus by yourself", "s12") \' \
-    ("o122", "Negotiate with Tustland and uthman to aid in peace treaty ", "s12") \' \
-    ("o123", "align with Tustland and uthman empire to aid their attack ", "s12") \
-    ')
+    ("o112", "Negotiate with Kevian Rus to help and help yourself", "s11"),  \
+    ("o121", "Help Kevian Rus by yourself", "s12"),  \
+    ("o122", "Negotiate with Tustland and uthman to aid in peace treaty ", "s12"),  \
+    ("o123", "align with Tustland and uthman empire to aid their attack ", "s12")')
     
                
 
@@ -64,5 +62,4 @@ cursor.execute('INSERT INTO affects \
     ("3","+2","o122"), \
     ("2","-1","o122"), \
     ("2","+2","o123"), \
-    ("3","+1","o123"), \
-    ')
+    ("3","+1","o123")')
